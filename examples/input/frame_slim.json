@@ -1,0 +1,272 @@
+{
+  "@context": {
+    "aas": "https://admin-shell.io/aas/3/0/",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "aas:value": {
+        "@type": "xs:float"
+    },
+    "idShort": "aas:Referable/idShort",
+    "modelType": {
+      "@id": "@type",
+      "@type": "@vocab"
+    },
+    "id": "aas:Identifiable/id",
+    "kind": {
+      "@id": "aas:HasKind/kind",
+      "@type": "@vocab"
+    },
+    
+    "displayName": {
+      "@id": "aas:Referable/displayName",
+      "@container": "@set",
+      "@context": {
+        "language": "aas:AbstractLangString/language",
+        "text": "aas:AbstractLangString/text"
+      }
+    },
+    
+    "description": {
+      "@id": "aas:Referable/description", 
+      "@container": "@set",
+      "@context": {
+        "language": "aas:AbstractLangString/language",
+        "text": "aas:AbstractLangString/text"
+      }
+    },
+    
+    "administration": {
+      "@id": "aas:Identifiable/administration",
+      "@context": {
+        "version": "aas:AdministrativeInformation/version",
+        "revision": "aas:AdministrativeInformation/revision",
+        "templateId": "aas:AdministrativeInformation/templateId"
+      }
+    },
+    
+    "semanticId": {
+      "@id": "aas:HasSemantics/semanticId",
+      "@context": {
+        "type": {
+          "@id": "aas:Reference/type",
+          "@type": "@vocab"
+        },
+        "keys": {
+          "@id": "aas:Reference/keys",
+          "@container": "@set",
+          "@context": {
+            "type": {
+              "@id": "aas:Key/type",
+              "@type": "@vocab"
+            },
+            "value": "aas:Key/value"
+          }
+        }
+      }
+    },
+    
+    "qualifiers": {
+      "@id": "aas:Qualifiable/qualifiers",
+      "@container": "@set",
+      "@context": {
+        "semanticId": {
+          "@id": "aas:HasSemantics/semanticId",
+          "@context": {
+            "type": {
+              "@id": "aas:Reference/type",
+              "@type": "@vocab"
+            },
+            "keys": {
+              "@id": "aas:Reference/keys",
+              "@container": "@set",
+              "@context": {
+                "type": {
+                  "@id": "aas:Key/type",
+                  "@type": "@vocab"
+                },
+                "value": "aas:Key/value"
+              }
+            }
+          }
+        },
+        "kind": {
+          "@id": "aas:Qualifier/kind",
+          "@type": "@vocab"
+        },
+        "type": "aas:Qualifier/type",
+        "value": "aas:Qualifier/value",
+        "valueType": {
+          "@id": "aas:Qualifier/valueType",
+          "@type": "@vocab"
+        }
+      }
+    },
+    
+    "submodelElements": {
+      "@id": "aas:Submodel/submodelElements",
+      "@container": "@set",
+      "@context": {
+        "idShort": "aas:Referable/idShort",
+        "modelType": {
+          "@id": "@type",
+          "@type": "@vocab"
+        },
+        "displayName": {
+          "@id": "aas:Referable/displayName",
+          "@container": "@set",
+          "@context": {
+            "language": "aas:AbstractLangString/language",
+            "text": "aas:AbstractLangString/text"
+          }
+        },
+        "semanticId": {
+          "@id": "aas:HasSemantics/semanticId",
+          "@context": {
+            "type": {
+              "@id": "aas:Reference/type",
+              "@type": "@vocab"
+            },
+            "keys": {
+              "@id": "aas:Reference/keys",
+              "@container": "@set",
+              "@context": {
+                "type": {
+                  "@id": "aas:Key/type",
+                  "@type": "@vocab"
+                },
+                "value": "aas:Key/value"
+              }
+            }
+          }
+        },
+        "qualifiers": {
+          "@id": "aas:Qualifiable/qualifiers",
+          "@container": "@set",
+          "@context": {
+            "semanticId": {
+              "@id": "aas:HasSemantics/semanticId",
+              "@context": {
+                "type": {
+                  "@id": "aas:Reference/type",
+                  "@type": "@vocab"
+                },
+                "keys": {
+                  "@id": "aas:Reference/keys",
+                  "@container": "@set",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Key/type",
+                      "@type": "@vocab"
+                    },
+                    "value": "aas:Key/value"
+                  }
+                }
+              }
+            },
+            "kind": {
+              "@id": "aas:Qualifier/kind",
+              "@type": "@vocab"
+            },
+            "type": "aas:Qualifier/type",
+            "value": "aas:Qualifier/value",
+            "valueType": {
+              "@id": "aas:Qualifier/valueType",
+              "@type": "@vocab"
+            }
+          }
+        },
+        "value": {
+          "@id": "aas:SubmodelElementCollection/value",
+          "@container": "@set",
+          "@context": {
+            "idShort": "aas:Referable/idShort",
+            "modelType": {
+              "@id": "@type",
+              "@type": "@vocab"
+            },
+            "displayName": {
+              "@id": "aas:Referable/displayName",
+              "@container": "@set",
+              "@context": {
+                "language": "aas:AbstractLangString/language",
+                "text": "aas:AbstractLangString/text"
+              }
+            },
+            "semanticId": {
+              "@id": "aas:HasSemantics/semanticId",
+              "@context": {
+                "type": {
+                  "@id": "aas:Reference/type",
+                  "@type": "@vocab"
+                },
+                "keys": {
+                  "@id": "aas:Reference/keys",
+                  "@container": "@set",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Key/type",
+                      "@type": "@vocab"
+                    },
+                    "value": "aas:Key/value"
+                  }
+                }
+              }
+            },
+            "qualifiers": {
+              "@id": "aas:Qualifiable/qualifiers",
+              "@container": "@set",
+              "@context": {
+                "semanticId": {
+                  "@id": "aas:HasSemantics/semanticId",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Reference/type",
+                      "@type": "@vocab"
+                    },
+                    "keys": {
+                      "@id": "aas:Reference/keys",
+                      "@container": "@set",
+                      "@context": {
+                        "type": {
+                          "@id": "aas:Key/type",
+                          "@type": "@vocab"
+                        },
+                        "value": "aas:Key/value"
+                      }
+                    }
+                  }
+                },
+                "kind": {
+                  "@id": "aas:Qualifier/kind",
+                  "@type": "@vocab"
+                },
+                "type": "aas:Qualifier/type",
+                "value": "aas:Qualifier/value",
+                "valueType": {
+                  "@id": "aas:Qualifier/valueType",
+                  "@type": "@vocab"
+                }
+              }
+            },
+            "valueType": {
+              "@id": "aas:Property/valueType",
+              "@type": "@vocab"
+            },
+            "value": {
+                "@id": "aas:Property/value",
+                "@type": "xs:float"
+            }         
+          }
+        }
+      }
+    },
+    
+    "valueType": {
+      "@id": "aas:Property/valueType",
+      "@type": "@vocab"
+    },
+    "value": {
+        "@id": "aas:Property/value",
+        "@type": "xs:float"
+    }
+  }
+}

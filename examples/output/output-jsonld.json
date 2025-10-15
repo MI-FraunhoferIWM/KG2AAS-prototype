@@ -1,0 +1,1174 @@
+{
+  "@context": {
+    "aas": "https://admin-shell.io/aas/3/0/",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "aas:value": {
+      "@type": "xs:float"
+    },
+    "idShort": "aas:Referable/idShort",
+    "modelType": {
+      "@id": "@type",
+      "@type": "@vocab"
+    },
+    "id": "aas:Identifiable/id",
+    "kind": {
+      "@id": "aas:HasKind/kind",
+      "@type": "@vocab"
+    },
+    "displayName": {
+      "@id": "aas:Referable/displayName",
+      "@container": "@set",
+      "@context": {
+        "language": "aas:AbstractLangString/language",
+        "text": "aas:AbstractLangString/text"
+      }
+    },
+    "description": {
+      "@id": "aas:Referable/description",
+      "@container": "@set",
+      "@context": {
+        "language": "aas:AbstractLangString/language",
+        "text": "aas:AbstractLangString/text"
+      }
+    },
+    "administration": {
+      "@id": "aas:Identifiable/administration",
+      "@context": {
+        "version": "aas:AdministrativeInformation/version",
+        "revision": "aas:AdministrativeInformation/revision",
+        "templateId": "aas:AdministrativeInformation/templateId"
+      }
+    },
+    "semanticId": {
+      "@id": "aas:HasSemantics/semanticId",
+      "@context": {
+        "type": {
+          "@id": "aas:Reference/type",
+          "@type": "@vocab"
+        },
+        "keys": {
+          "@id": "aas:Reference/keys",
+          "@container": "@set",
+          "@context": {
+            "type": {
+              "@id": "aas:Key/type",
+              "@type": "@vocab"
+            },
+            "value": "aas:Key/value"
+          }
+        }
+      }
+    },
+    "qualifiers": {
+      "@id": "aas:Qualifiable/qualifiers",
+      "@container": "@set",
+      "@context": {
+        "semanticId": {
+          "@id": "aas:HasSemantics/semanticId",
+          "@context": {
+            "type": {
+              "@id": "aas:Reference/type",
+              "@type": "@vocab"
+            },
+            "keys": {
+              "@id": "aas:Reference/keys",
+              "@container": "@set",
+              "@context": {
+                "type": {
+                  "@id": "aas:Key/type",
+                  "@type": "@vocab"
+                },
+                "value": "aas:Key/value"
+              }
+            }
+          }
+        },
+        "kind": {
+          "@id": "aas:Qualifier/kind",
+          "@type": "@vocab"
+        },
+        "type": "aas:Qualifier/type",
+        "value": "aas:Qualifier/value",
+        "valueType": {
+          "@id": "aas:Qualifier/valueType",
+          "@type": "@vocab"
+        }
+      }
+    },
+    "submodelElements": {
+      "@id": "aas:Submodel/submodelElements",
+      "@container": "@set",
+      "@context": {
+        "idShort": "aas:Referable/idShort",
+        "modelType": {
+          "@id": "@type",
+          "@type": "@vocab"
+        },
+        "displayName": {
+          "@id": "aas:Referable/displayName",
+          "@container": "@set",
+          "@context": {
+            "language": "aas:AbstractLangString/language",
+            "text": "aas:AbstractLangString/text"
+          }
+        },
+        "semanticId": {
+          "@id": "aas:HasSemantics/semanticId",
+          "@context": {
+            "type": {
+              "@id": "aas:Reference/type",
+              "@type": "@vocab"
+            },
+            "keys": {
+              "@id": "aas:Reference/keys",
+              "@container": "@set",
+              "@context": {
+                "type": {
+                  "@id": "aas:Key/type",
+                  "@type": "@vocab"
+                },
+                "value": "aas:Key/value"
+              }
+            }
+          }
+        },
+        "qualifiers": {
+          "@id": "aas:Qualifiable/qualifiers",
+          "@container": "@set",
+          "@context": {
+            "semanticId": {
+              "@id": "aas:HasSemantics/semanticId",
+              "@context": {
+                "type": {
+                  "@id": "aas:Reference/type",
+                  "@type": "@vocab"
+                },
+                "keys": {
+                  "@id": "aas:Reference/keys",
+                  "@container": "@set",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Key/type",
+                      "@type": "@vocab"
+                    },
+                    "value": "aas:Key/value"
+                  }
+                }
+              }
+            },
+            "kind": {
+              "@id": "aas:Qualifier/kind",
+              "@type": "@vocab"
+            },
+            "type": "aas:Qualifier/type",
+            "value": "aas:Qualifier/value",
+            "valueType": {
+              "@id": "aas:Qualifier/valueType",
+              "@type": "@vocab"
+            }
+          }
+        },
+        "value": {
+          "@id": "aas:SubmodelElementCollection/value",
+          "@container": "@set",
+          "@context": {
+            "idShort": "aas:Referable/idShort",
+            "modelType": {
+              "@id": "@type",
+              "@type": "@vocab"
+            },
+            "displayName": {
+              "@id": "aas:Referable/displayName",
+              "@container": "@set",
+              "@context": {
+                "language": "aas:AbstractLangString/language",
+                "text": "aas:AbstractLangString/text"
+              }
+            },
+            "semanticId": {
+              "@id": "aas:HasSemantics/semanticId",
+              "@context": {
+                "type": {
+                  "@id": "aas:Reference/type",
+                  "@type": "@vocab"
+                },
+                "keys": {
+                  "@id": "aas:Reference/keys",
+                  "@container": "@set",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Key/type",
+                      "@type": "@vocab"
+                    },
+                    "value": "aas:Key/value"
+                  }
+                }
+              }
+            },
+            "qualifiers": {
+              "@id": "aas:Qualifiable/qualifiers",
+              "@container": "@set",
+              "@context": {
+                "semanticId": {
+                  "@id": "aas:HasSemantics/semanticId",
+                  "@context": {
+                    "type": {
+                      "@id": "aas:Reference/type",
+                      "@type": "@vocab"
+                    },
+                    "keys": {
+                      "@id": "aas:Reference/keys",
+                      "@container": "@set",
+                      "@context": {
+                        "type": {
+                          "@id": "aas:Key/type",
+                          "@type": "@vocab"
+                        },
+                        "value": "aas:Key/value"
+                      }
+                    }
+                  }
+                },
+                "kind": {
+                  "@id": "aas:Qualifier/kind",
+                  "@type": "@vocab"
+                },
+                "type": "aas:Qualifier/type",
+                "value": "aas:Qualifier/value",
+                "valueType": {
+                  "@id": "aas:Qualifier/valueType",
+                  "@type": "@vocab"
+                }
+              }
+            },
+            "valueType": {
+              "@id": "aas:Property/valueType",
+              "@type": "@vocab"
+            },
+            "value": {
+              "@id": "aas:Property/value",
+              "@type": "xs:float"
+            }
+          }
+        }
+      }
+    },
+    "valueType": {
+      "@id": "aas:Property/valueType",
+      "@type": "@vocab"
+    },
+    "value": {
+      "@id": "aas:Property/value",
+      "@type": "xs:float"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "_:b0",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b28",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b1",
+      "aas:AdministrativeInformation/revision": "1",
+      "aas:AdministrativeInformation/templateId": "1",
+      "aas:AdministrativeInformation/version": "1"
+    },
+    {
+      "@id": "_:b10",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b24",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b11",
+      "@type": "aas:Qualifier",
+      "semanticId": {
+        "@id": "_:b21",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b22",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "aas:Qualifier/kind": {
+        "@id": "aas:QualifierKind/TemplateQualifier"
+      },
+      "aas:Qualifier/type": "SMT/Cardinality",
+      "aas:Qualifier/value": "ZeroToMany",
+      "aas:Qualifier/valueType": {
+        "@id": "aas:DataTypeDefXsd/xs:string"
+      }
+    },
+    {
+      "@id": "_:b12",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "en",
+      "aas:AbstractLangString/text": [
+        {
+          "@id": "_:b23",
+          "@type": "aas:LangStringNameType",
+          "aas:AbstractLangString/language": "de",
+          "aas:AbstractLangString/text": "Zugversuch"
+        },
+        "Tensile Test"
+      ]
+    },
+    {
+      "@id": "_:b13",
+      "@type": "aas:Property",
+      "semanticId": {
+        "@id": "_:b14",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b20",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "valueType": "aas:DataTypeDefXsd/xs:float",
+      "qualifiers": [
+        {
+          "@id": "_:b15",
+          "@type": "aas:Qualifier",
+          "semanticId": {
+            "@id": "_:b17",
+            "@type": "aas:Reference",
+            "keys": [
+              {
+                "@id": "_:b18",
+                "@type": "aas:Key",
+                "type": "aas:KeyTypes/GlobalReference",
+                "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              }
+            ],
+            "type": "aas:ReferenceTypes/ExternalReference"
+          },
+          "kind": "aas:QualifierKind/TemplateQualifier",
+          "type": "SMT/Cardinality",
+          "value": "ZeroToOne",
+          "valueType": "aas:DataTypeDefXsd/xs:string"
+        }
+      ],
+      "displayName": [
+        {
+          "@id": "_:b16",
+          "@type": "aas:LangStringNameType",
+          "language": "en",
+          "text": [
+            {
+              "@id": "_:b19",
+              "@type": "aas:LangStringNameType",
+              "language": "de",
+              "text": "Zugfestigkeit Mittelwert"
+            },
+            "Tensile Strength Mean"
+          ]
+        }
+      ],
+      "idShort": "TensileStrengthMean",
+      "aas:value": "782.094"
+    },
+    {
+      "@id": "_:b14",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b20",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b15",
+      "@type": "aas:Qualifier",
+      "semanticId": {
+        "@id": "_:b17",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b18",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "aas:Qualifier/kind": {
+        "@id": "aas:QualifierKind/TemplateQualifier"
+      },
+      "aas:Qualifier/type": "SMT/Cardinality",
+      "aas:Qualifier/value": "ZeroToOne",
+      "aas:Qualifier/valueType": {
+        "@id": "aas:DataTypeDefXsd/xs:string"
+      }
+    },
+    {
+      "@id": "_:b16",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "en",
+      "aas:AbstractLangString/text": [
+        {
+          "@id": "_:b19",
+          "@type": "aas:LangStringNameType",
+          "aas:AbstractLangString/language": "de",
+          "aas:AbstractLangString/text": "Zugfestigkeit Mittelwert"
+        },
+        "Tensile Strength Mean"
+      ]
+    },
+    {
+      "@id": "_:b17",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b18",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b18",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+    },
+    {
+      "@id": "_:b19",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "de",
+      "aas:AbstractLangString/text": "Zugfestigkeit Mittelwert"
+    },
+    {
+      "@id": "_:b2",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "en",
+      "aas:AbstractLangString/text": [
+        {
+          "@id": "_:b27",
+          "@type": "aas:LangStringNameType",
+          "aas:AbstractLangString/language": "de",
+          "aas:AbstractLangString/text": "Pr\u00fcfbescheinigung f\u00fcr Stahlprodukte"
+        },
+        "Inspection Documents for Steel Products"
+      ]
+    },
+    {
+      "@id": "_:b20",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+    },
+    {
+      "@id": "_:b21",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b22",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b22",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+    },
+    {
+      "@id": "_:b23",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "de",
+      "aas:AbstractLangString/text": "Zugversuch"
+    },
+    {
+      "@id": "_:b24",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+    },
+    {
+      "@id": "_:b25",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "en",
+      "aas:AbstractLangString/text": "Mechanical Tests"
+    },
+    {
+      "@id": "_:b26",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "0173-1#01-AKG420#020"
+    },
+    {
+      "@id": "_:b27",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "de",
+      "aas:AbstractLangString/text": "Pr\u00fcfbescheinigung f\u00fcr Stahlprodukte"
+    },
+    {
+      "@id": "_:b28",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"
+    },
+    {
+      "@id": "_:b3",
+      "@type": "aas:SubmodelElementCollection",
+      "semanticId": {
+        "@id": "_:b4",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b26",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "0173-1#01-AKG420#020"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "qualifiers": [
+        {
+          "@id": "_:b5",
+          "@type": "aas:Qualifier",
+          "semanticId": {
+            "@id": "_:b8",
+            "@type": "aas:Reference",
+            "keys": [
+              {
+                "@id": "_:b9",
+                "@type": "aas:Key",
+                "type": "aas:KeyTypes/GlobalReference",
+                "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              }
+            ],
+            "type": "aas:ReferenceTypes/ExternalReference"
+          },
+          "kind": "aas:QualifierKind/TemplateQualifier",
+          "type": "SMT/Cardinality",
+          "value": "ZeroToOne",
+          "valueType": "aas:DataTypeDefXsd/xs:string"
+        }
+      ],
+      "displayName": [
+        {
+          "@id": "_:b6",
+          "@type": "aas:LangStringNameType",
+          "language": "de",
+          "text": [
+            {
+              "@id": "_:b25",
+              "@type": "aas:LangStringNameType",
+              "language": "en",
+              "text": "Mechanical Tests"
+            },
+            "Mechanische Pr\u00fcfungen"
+          ]
+        }
+      ],
+      "idShort": "MechanicalTests",
+      "aas:SubmodelElementCollection/value": {
+        "@id": "_:b7",
+        "@type": "aas:SubmodelElementCollection",
+        "semanticId": {
+          "@id": "_:b10",
+          "@type": "aas:Reference",
+          "keys": [
+            {
+              "@id": "_:b24",
+              "@type": "aas:Key",
+              "type": "aas:KeyTypes/GlobalReference",
+              "value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+            }
+          ],
+          "type": "aas:ReferenceTypes/ExternalReference"
+        },
+        "qualifiers": [
+          {
+            "@id": "_:b11",
+            "@type": "aas:Qualifier",
+            "semanticId": {
+              "@id": "_:b21",
+              "@type": "aas:Reference",
+              "keys": [
+                {
+                  "@id": "_:b22",
+                  "@type": "aas:Key",
+                  "type": "aas:KeyTypes/GlobalReference",
+                  "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                }
+              ],
+              "type": "aas:ReferenceTypes/ExternalReference"
+            },
+            "kind": "aas:QualifierKind/TemplateQualifier",
+            "type": "SMT/Cardinality",
+            "value": "ZeroToMany",
+            "valueType": "aas:DataTypeDefXsd/xs:string"
+          }
+        ],
+        "displayName": [
+          {
+            "@id": "_:b12",
+            "@type": "aas:LangStringNameType",
+            "language": "en",
+            "text": [
+              {
+                "@id": "_:b23",
+                "@type": "aas:LangStringNameType",
+                "language": "de",
+                "text": "Zugversuch"
+              },
+              "Tensile Test"
+            ]
+          }
+        ],
+        "idShort": "TensileTest__00__",
+        "aas:SubmodelElementCollection/value": {
+          "@id": "_:b13",
+          "@type": "aas:Property",
+          "semanticId": {
+            "@id": "_:b14",
+            "@type": "aas:Reference",
+            "keys": [
+              {
+                "@id": "_:b20",
+                "@type": "aas:Key",
+                "type": "aas:KeyTypes/GlobalReference",
+                "value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+              }
+            ],
+            "type": "aas:ReferenceTypes/ExternalReference"
+          },
+          "valueType": "aas:DataTypeDefXsd/xs:float",
+          "qualifiers": [
+            {
+              "@id": "_:b15",
+              "@type": "aas:Qualifier",
+              "semanticId": {
+                "@id": "_:b17",
+                "@type": "aas:Reference",
+                "keys": [
+                  {
+                    "@id": "_:b18",
+                    "@type": "aas:Key",
+                    "type": "aas:KeyTypes/GlobalReference",
+                    "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                  }
+                ],
+                "type": "aas:ReferenceTypes/ExternalReference"
+              },
+              "kind": "aas:QualifierKind/TemplateQualifier",
+              "type": "SMT/Cardinality",
+              "value": "ZeroToOne",
+              "valueType": "aas:DataTypeDefXsd/xs:string"
+            }
+          ],
+          "displayName": [
+            {
+              "@id": "_:b16",
+              "@type": "aas:LangStringNameType",
+              "language": "en",
+              "text": [
+                {
+                  "@id": "_:b19",
+                  "@type": "aas:LangStringNameType",
+                  "language": "de",
+                  "text": "Zugfestigkeit Mittelwert"
+                },
+                "Tensile Strength Mean"
+              ]
+            }
+          ],
+          "idShort": "TensileStrengthMean",
+          "aas:value": "782.094"
+        }
+      }
+    },
+    {
+      "@id": "_:b4",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b26",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "0173-1#01-AKG420#020"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b5",
+      "@type": "aas:Qualifier",
+      "semanticId": {
+        "@id": "_:b8",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b9",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "aas:Qualifier/kind": {
+        "@id": "aas:QualifierKind/TemplateQualifier"
+      },
+      "aas:Qualifier/type": "SMT/Cardinality",
+      "aas:Qualifier/value": "ZeroToOne",
+      "aas:Qualifier/valueType": {
+        "@id": "aas:DataTypeDefXsd/xs:string"
+      }
+    },
+    {
+      "@id": "_:b6",
+      "@type": "aas:LangStringNameType",
+      "aas:AbstractLangString/language": "de",
+      "aas:AbstractLangString/text": [
+        {
+          "@id": "_:b25",
+          "@type": "aas:LangStringNameType",
+          "aas:AbstractLangString/language": "en",
+          "aas:AbstractLangString/text": "Mechanical Tests"
+        },
+        "Mechanische Pr\u00fcfungen"
+      ]
+    },
+    {
+      "@id": "_:b7",
+      "@type": "aas:SubmodelElementCollection",
+      "semanticId": {
+        "@id": "_:b10",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b24",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "qualifiers": [
+        {
+          "@id": "_:b11",
+          "@type": "aas:Qualifier",
+          "semanticId": {
+            "@id": "_:b21",
+            "@type": "aas:Reference",
+            "keys": [
+              {
+                "@id": "_:b22",
+                "@type": "aas:Key",
+                "type": "aas:KeyTypes/GlobalReference",
+                "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              }
+            ],
+            "type": "aas:ReferenceTypes/ExternalReference"
+          },
+          "kind": "aas:QualifierKind/TemplateQualifier",
+          "type": "SMT/Cardinality",
+          "value": "ZeroToMany",
+          "valueType": "aas:DataTypeDefXsd/xs:string"
+        }
+      ],
+      "displayName": [
+        {
+          "@id": "_:b12",
+          "@type": "aas:LangStringNameType",
+          "language": "en",
+          "text": [
+            {
+              "@id": "_:b23",
+              "@type": "aas:LangStringNameType",
+              "language": "de",
+              "text": "Zugversuch"
+            },
+            "Tensile Test"
+          ]
+        }
+      ],
+      "idShort": "TensileTest__00__",
+      "aas:SubmodelElementCollection/value": {
+        "@id": "_:b13",
+        "@type": "aas:Property",
+        "semanticId": {
+          "@id": "_:b14",
+          "@type": "aas:Reference",
+          "keys": [
+            {
+              "@id": "_:b20",
+              "@type": "aas:Key",
+              "type": "aas:KeyTypes/GlobalReference",
+              "value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+            }
+          ],
+          "type": "aas:ReferenceTypes/ExternalReference"
+        },
+        "valueType": "aas:DataTypeDefXsd/xs:float",
+        "qualifiers": [
+          {
+            "@id": "_:b15",
+            "@type": "aas:Qualifier",
+            "semanticId": {
+              "@id": "_:b17",
+              "@type": "aas:Reference",
+              "keys": [
+                {
+                  "@id": "_:b18",
+                  "@type": "aas:Key",
+                  "type": "aas:KeyTypes/GlobalReference",
+                  "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                }
+              ],
+              "type": "aas:ReferenceTypes/ExternalReference"
+            },
+            "kind": "aas:QualifierKind/TemplateQualifier",
+            "type": "SMT/Cardinality",
+            "value": "ZeroToOne",
+            "valueType": "aas:DataTypeDefXsd/xs:string"
+          }
+        ],
+        "displayName": [
+          {
+            "@id": "_:b16",
+            "@type": "aas:LangStringNameType",
+            "language": "en",
+            "text": [
+              {
+                "@id": "_:b19",
+                "@type": "aas:LangStringNameType",
+                "language": "de",
+                "text": "Zugfestigkeit Mittelwert"
+              },
+              "Tensile Strength Mean"
+            ]
+          }
+        ],
+        "idShort": "TensileStrengthMean",
+        "aas:value": "782.094"
+      }
+    },
+    {
+      "@id": "_:b8",
+      "@type": "aas:Reference",
+      "aas:Reference/keys": {
+        "@id": "_:b9",
+        "@type": "aas:Key",
+        "aas:Key/type": {
+          "@id": "aas:KeyTypes/GlobalReference"
+        },
+        "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+      },
+      "aas:Reference/type": {
+        "@id": "aas:ReferenceTypes/ExternalReference"
+      }
+    },
+    {
+      "@id": "_:b9",
+      "@type": "aas:Key",
+      "aas:Key/type": {
+        "@id": "aas:KeyTypes/GlobalReference"
+      },
+      "aas:Key/value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+    },
+    {
+      "@id": "aas:DataTypeDefXsd/xs:float"
+    },
+    {
+      "@id": "aas:DataTypeDefXsd/xs:string"
+    },
+    {
+      "@id": "aas:KeyTypes/GlobalReference"
+    },
+    {
+      "@id": "aas:ModellingKind/Instance"
+    },
+    {
+      "@id": "aas:QualifierKind/TemplateQualifier"
+    },
+    {
+      "@id": "aas:ReferenceTypes/ExternalReference"
+    },
+    {
+      "@id": "https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380",
+      "@type": "aas:Submodel",
+      "kind": "aas:ModellingKind/Instance",
+      "semanticId": {
+        "@id": "_:b0",
+        "@type": "aas:Reference",
+        "keys": [
+          {
+            "@id": "_:b28",
+            "@type": "aas:Key",
+            "type": "aas:KeyTypes/GlobalReference",
+            "value": "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"
+          }
+        ],
+        "type": "aas:ReferenceTypes/ExternalReference"
+      },
+      "administration": {
+        "@id": "_:b1",
+        "revision": "1",
+        "templateId": "1",
+        "version": "1"
+      },
+      "id": "https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380",
+      "displayName": [
+        {
+          "@id": "_:b2",
+          "@type": "aas:LangStringNameType",
+          "language": "en",
+          "text": [
+            {
+              "@id": "_:b27",
+              "@type": "aas:LangStringNameType",
+              "language": "de",
+              "text": "Pr\u00fcfbescheinigung f\u00fcr Stahlprodukte"
+            },
+            "Inspection Documents for Steel Products"
+          ]
+        }
+      ],
+      "idShort": "InspectionDocumentsOfSteelProducts",
+      "submodelElements": [
+        {
+          "@id": "_:b3",
+          "@type": "aas:SubmodelElementCollection",
+          "semanticId": {
+            "@id": "_:b4",
+            "@type": "aas:Reference",
+            "keys": [
+              {
+                "@id": "_:b26",
+                "@type": "aas:Key",
+                "type": "aas:KeyTypes/GlobalReference",
+                "value": "0173-1#01-AKG420#020"
+              }
+            ],
+            "type": "aas:ReferenceTypes/ExternalReference"
+          },
+          "qualifiers": [
+            {
+              "@id": "_:b5",
+              "@type": "aas:Qualifier",
+              "semanticId": {
+                "@id": "_:b8",
+                "@type": "aas:Reference",
+                "keys": [
+                  {
+                    "@id": "_:b9",
+                    "@type": "aas:Key",
+                    "type": "aas:KeyTypes/GlobalReference",
+                    "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                  }
+                ],
+                "type": "aas:ReferenceTypes/ExternalReference"
+              },
+              "kind": "aas:QualifierKind/TemplateQualifier",
+              "type": "SMT/Cardinality",
+              "value": "ZeroToOne",
+              "valueType": "aas:DataTypeDefXsd/xs:string"
+            }
+          ],
+          "displayName": [
+            {
+              "@id": "_:b6",
+              "@type": "aas:LangStringNameType",
+              "language": "de",
+              "text": [
+                {
+                  "@id": "_:b25",
+                  "@type": "aas:LangStringNameType",
+                  "language": "en",
+                  "text": "Mechanical Tests"
+                },
+                "Mechanische Pr\u00fcfungen"
+              ]
+            }
+          ],
+          "idShort": "MechanicalTests",
+          "value": [
+            {
+              "@id": "_:b7",
+              "@type": "aas:SubmodelElementCollection",
+              "semanticId": {
+                "@id": "_:b10",
+                "@type": "aas:Reference",
+                "keys": [
+                  {
+                    "@id": "_:b24",
+                    "@type": "aas:Key",
+                    "type": "aas:KeyTypes/GlobalReference",
+                    "value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+                  }
+                ],
+                "type": "aas:ReferenceTypes/ExternalReference"
+              },
+              "qualifiers": [
+                {
+                  "@id": "_:b11",
+                  "@type": "aas:Qualifier",
+                  "semanticId": {
+                    "@id": "_:b21",
+                    "@type": "aas:Reference",
+                    "keys": [
+                      {
+                        "@id": "_:b22",
+                        "@type": "aas:Key",
+                        "type": "aas:KeyTypes/GlobalReference",
+                        "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                      }
+                    ],
+                    "type": "aas:ReferenceTypes/ExternalReference"
+                  },
+                  "kind": "aas:QualifierKind/TemplateQualifier",
+                  "type": "SMT/Cardinality",
+                  "value": "ZeroToMany",
+                  "valueType": "aas:DataTypeDefXsd/xs:string"
+                }
+              ],
+              "displayName": [
+                {
+                  "@id": "_:b12",
+                  "@type": "aas:LangStringNameType",
+                  "language": "en",
+                  "text": [
+                    {
+                      "@id": "_:b23",
+                      "@type": "aas:LangStringNameType",
+                      "language": "de",
+                      "text": "Zugversuch"
+                    },
+                    "Tensile Test"
+                  ]
+                }
+              ],
+              "idShort": "TensileTest__00__",
+              "aas:SubmodelElementCollection/value": {
+                "@id": "_:b13",
+                "@type": "aas:Property",
+                "semanticId": {
+                  "@id": "_:b14",
+                  "@type": "aas:Reference",
+                  "keys": [
+                    {
+                      "@id": "_:b20",
+                      "@type": "aas:Key",
+                      "type": "aas:KeyTypes/GlobalReference",
+                      "value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+                    }
+                  ],
+                  "type": "aas:ReferenceTypes/ExternalReference"
+                },
+                "valueType": "aas:DataTypeDefXsd/xs:float",
+                "qualifiers": [
+                  {
+                    "@id": "_:b15",
+                    "@type": "aas:Qualifier",
+                    "semanticId": {
+                      "@id": "_:b17",
+                      "@type": "aas:Reference",
+                      "keys": [
+                        {
+                          "@id": "_:b18",
+                          "@type": "aas:Key",
+                          "type": "aas:KeyTypes/GlobalReference",
+                          "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                        }
+                      ],
+                      "type": "aas:ReferenceTypes/ExternalReference"
+                    },
+                    "kind": "aas:QualifierKind/TemplateQualifier",
+                    "type": "SMT/Cardinality",
+                    "value": "ZeroToOne",
+                    "valueType": "aas:DataTypeDefXsd/xs:string"
+                  }
+                ],
+                "displayName": [
+                  {
+                    "@id": "_:b16",
+                    "@type": "aas:LangStringNameType",
+                    "language": "en",
+                    "text": [
+                      {
+                        "@id": "_:b19",
+                        "@type": "aas:LangStringNameType",
+                        "language": "de",
+                        "text": "Zugfestigkeit Mittelwert"
+                      },
+                      "Tensile Strength Mean"
+                    ]
+                  }
+                ],
+                "idShort": "TensileStrengthMean",
+                "aas:value": "782.094"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

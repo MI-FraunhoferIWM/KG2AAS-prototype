@@ -1,0 +1,163 @@
+ {
+            "idShort": "InspectionDocumentsOfSteelProducts",
+            "displayName": [
+                {
+                    "language": "de",
+                    "text": "Pr\u00fcfbescheinigung f\u00fcr Stahlprodukte"
+                },
+                {
+                    "language": "en",
+                    "text": "Inspection Documents for Steel Products"
+                }
+            ],
+            "modelType": "Submodel",
+            "id": "https://materials-data.space/ids/sm/7343_6052_8052_9441",
+            "administration": {
+                "version": "1",
+                "revision": "0",
+                "templateId": "https://admin-shell.io/idta/02032-1-0"
+            },
+            "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                    {
+                        "type": "GlobalReference",
+                        "value": "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"
+                    }
+                ]
+            },
+            "submodelElements": [
+
+
+                {
+                    "idShort": "MechanicalTests",
+                    "displayName": [
+                        {
+                            "language": "de",
+                            "text": "Mechanische Pr\u00fcfungen"
+                        },
+                        {
+                            "language": "en",
+                            "text": "Mechanical Tests"
+                        }
+                    ],
+                    "modelType": "SubmodelElementCollection",
+                    "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                            {
+                                "type": "GlobalReference",
+                                "value": "0173-1#01-AKG420#020"
+                            }
+                        ]
+                    },
+                    "qualifiers": [
+                        {
+                            "semanticId": {
+                                "type": "ExternalReference",
+                                "keys": [
+                                    {
+                                        "type": "GlobalReference",
+                                        "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                                    }
+                                ]
+                            },
+                            "value": "ZeroToOne",
+                            "kind": "TemplateQualifier",
+                            "valueType": "xs:string",
+                            "type": "SMT/Cardinality"
+                        }
+                    ],
+                    "value": [
+                        {
+                            "idShort": "TensileTest__00__",
+                            "displayName": [
+                                {
+                                    "language": "de",
+                                    "text": "Zugversuch"
+                                },
+                                {
+                                    "language": "en",
+                                    "text": "Tensile Test"
+                                }
+                            ],
+                            "modelType": "SubmodelElementCollection",
+                            "semanticId": {
+                                "type": "ExternalReference",
+                                "keys": [
+                                    {
+                                        "type": "GlobalReference",
+                                        "value": "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/TensileTest/1/0"
+                                    }
+                                ]
+                            },
+                            "qualifiers": [
+                                {
+                                    "semanticId": {
+                                        "type": "ExternalReference",
+                                        "keys": [
+                                            {
+                                                "type": "GlobalReference",
+                                                "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                                            }
+                                        ]
+                                    },
+                                    "value": "ZeroToMany",
+                                    "kind": "TemplateQualifier",
+                                    "valueType": "xs:string",
+                                    "type": "SMT/Cardinality"
+                                }
+                            ],
+                            "value": [
+
+                                {
+                                    "idShort": "TensileStrengthMean",
+                                    "displayName": [
+                                        {
+                                            "language": "de",
+                                            "text": "Zugfestigkeit Mittelwert"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "Tensile Strength Mean"
+                                        }
+                                    ],
+                                    "modelType": "Property",
+                                    "semanticId": {
+                                        "type": "ExternalReference",
+                                        "keys": [
+                                            {
+                                                "type": "GlobalReference",
+                                                "value": "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/TensileStrengthMean/1/0"
+                                            }
+                                        ]
+                                    },
+                                    "qualifiers": [
+                                        {
+                                            "semanticId": {
+                                                "type": "ExternalReference",
+                                                "keys": [
+                                                    {
+                                                        "type": "GlobalReference",
+                                                        "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                                                    }
+                                                ]
+                                            },
+                                            "value": "ZeroToOne",
+                                            "kind": "TemplateQualifier",
+                                            "valueType": "xs:string",
+                                            "type": "SMT/Cardinality"
+                                        }
+                                    ],
+                                    "valueType": "xs:float"
+                                }
+
+
+
+                            ]
+                        }
+                    ]
+                }
+
+            ]
+        }

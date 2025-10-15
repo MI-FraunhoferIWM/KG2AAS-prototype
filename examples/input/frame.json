@@ -1,0 +1,173 @@
+{
+  "@context": {
+    "idShort": "https://admin-shell.io/aas/3/0/Referable/idShort",
+    "displayName": "https://admin-shell.io/aas/3/0/Referable/displayName",
+    "id": "https://admin-shell.io/aas/3/0/Identifiable/id",
+    "administration": "https://admin-shell.io/aas/3/0/Identifiable/administration",
+    "semanticId": "https://admin-shell.io/aas/3/0/HasSemantics/semanticId",
+    "submodelElements": "https://admin-shell.io/aas/3/0/Submodel/submodelElements",
+    "qualifiers": "https://admin-shell.io/aas/3/0/Qualifiable/qualifiers",
+    "value": "https://admin-shell.io/aas/3/0/value",
+    "kind": {
+        "@id": "https://admin-shell.io/aas/3/0/HasKind/kind",
+        "@type": "@id"
+    },
+    "TemplateQualifier": "https://admin-shell.io/aas/3/0/QualifierKind/TemplateQualifier",
+    "ConceptQualifier": "https://admin-shell.io/aas/3/0/QualifierKind/ConceptQualifier",
+    "ValueQualifier": "https://admin-shell.io/aas/3/0/QualifierKind/ValueQualifier",
+    "collectionValue": "https://admin-shell.io/aas/3/0/SubmodelElementCollection/value",
+    "valueType": "https://admin-shell.io/aas/3/0/Property/valueType",
+    "language": "https://admin-shell.io/aas/3/0/AbstractLangString/language",
+    "text": "https://admin-shell.io/aas/3/0/AbstractLangString/text",
+    "type": {
+      "@id": "https://admin-shell.io/aas/3/0/Reference/type",
+      "@type": "@id"
+    },
+    "keys": "https://admin-shell.io/aas/3/0/Reference/keys",
+    "version": "https://admin-shell.io/aas/3/0/AdministrativeInformation/version",
+    "revision": "https://admin-shell.io/aas/3/0/AdministrativeInformation/revision",
+    "templateId": "https://admin-shell.io/aas/3/0/AdministrativeInformation/templateId",
+    "qualifierType": "https://admin-shell.io/aas/3/0/Qualifier/type",
+    "qualifierKind": "https://admin-shell.io/aas/3/0/Qualifier/kind",
+    "qualifierValue": "https://admin-shell.io/aas/3/0/Qualifier/value",
+    "qualifierValueType": "https://admin-shell.io/aas/3/0/Qualifier/valueType",
+    "keyType": "https://admin-shell.io/aas/3/0/Key/type",
+    "keyValue": "https://admin-shell.io/aas/3/0/Key/value"
+  },
+  "@type": "https://admin-shell.io/aas/3/0/Submodel",
+  "idShort": {},
+  "displayName": {
+    "@embed": "@always",
+    "language": {},
+    "text": {}
+  },
+  "id": {},
+  "kind": {},
+  "administration": {
+    "@embed": "@always",
+    "version": {},
+    "revision": {},
+    "templateId": {}
+  },
+  "semanticId": {
+    "@embed": "@always",
+    "type": {},
+    "keys": {
+      "@embed": "@always",
+      "type": {},
+      "value": "keyValue"
+    }
+  },
+  "submodelElements": {
+    "@embed": "@always",
+    "@type": "https://admin-shell.io/aas/3/0/SubmodelElementCollection",
+    "idShort": {},
+    "displayName": {
+      "@embed": "@always",
+      "language": {},
+      "text": {}
+    },
+    "semanticId": {
+      "@embed": "@always",
+      "type": {},
+      "keys": {
+        "@embed": "@always",
+        "type": {},
+        "value": "keyValue"
+      }
+    },
+    "qualifiers": {
+      "@embed": "@always",
+      "@type": "https://admin-shell.io/aas/3/0/Qualifier",
+      "semanticId": {
+        "@embed": "@always",
+        "type": {},
+        "keys": {
+          "@embed": "@always",
+          "type": {},
+          "value": "keyValue"
+        }
+      },
+      "value": "qualifierValue",
+      "kind":  {
+        "@id": "https://admin-shell.io/aas/3/0/Qualifier/kind",
+        "@type": "@id"
+      },
+      "valueType": "qualifierValueType",
+      "type": "qualifierType"
+    },
+    "value": {
+      "@embed": "@always",
+      "idShort": {},
+      "displayName": {
+        "@embed": "@always",
+        "language": {},
+        "text": {}
+      },
+      "semanticId": {
+        "@embed": "@always",
+        "type": {},
+        "keys": {
+          "@embed": "@always",
+          "type": {},
+          "value": "keyValue"
+        }
+      },
+      "qualifiers": {
+        "@embed": "@always",
+        "@type": "https://admin-shell.io/aas/3/0/Qualifier",
+        "semanticId": {
+          "@embed": "@always",
+          "type": {},
+          "keys": {
+            "@embed": "@always",
+            "type": {},
+            "value": "keyValue"
+          }
+        },
+        "value": "qualifierValue",
+        "kind":  "qualifierKind",
+        "valueType": "qualifierValueType",
+        "type": "qualifierType"
+      },
+      "valueType": {},
+      "value": {
+        "@embed": "@always",
+        "idShort": {},
+        "displayName": {
+          "@embed": "@always",
+          "language": {},
+          "text": {}
+        },
+        "semanticId": {
+          "@embed": "@always",
+          "type": {},
+          "keys": {
+            "@embed": "@always",
+            "type": {},
+            "value": "keyValue"
+          }
+        },
+        "qualifiers": {
+          "@embed": "@always",
+          "@type": "https://admin-shell.io/aas/3/0/Qualifier",
+          "semanticId": {
+            "@embed": "@always",
+            "type": {},
+            "keys": {
+              "@embed": "@always",
+              "type": {},
+              "value": "keyValue"
+            }
+          },
+          "value": "qualifierValue",
+          "kind": "qualifierKind",
+          "valueType": "qualifierValueType",
+          "type": "qualifierType"
+        },
+        "valueType": {},
+        "value": {}
+      }
+    }
+  }
+}

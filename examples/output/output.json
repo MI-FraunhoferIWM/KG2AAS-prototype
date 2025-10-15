@@ -1,0 +1,219 @@
+{
+  "@id": "https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380",
+  "@type": "Submodel",
+  "kind": "Instance",
+  "semanticId": {
+    "@id": "_:b0",
+    "@type": "Reference",
+    "keys": [
+      {
+        "@id": "_:b28",
+        "@type": "Key",
+        "type": "GlobalReference",
+        "value": "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"
+      }
+    ],
+    "type": "ExternalReference"
+  },
+  "administration": {
+    "@id": "_:b1",
+    "revision": "1",
+    "templateId": "1",
+    "version": "1"
+  },
+  "id": "https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380",
+  "displayName": [
+    {
+      "@id": "_:b2",
+      "@type": "LangStringNameType",
+      "language": "en",
+      "text": [
+        {
+          "@id": "_:b27",
+          "@type": "LangStringNameType",
+          "language": "de",
+          "text": "Pr\u00fcfbescheinigung f\u00fcr Stahlprodukte"
+        },
+        "Inspection Documents for Steel Products"
+      ]
+    }
+  ],
+  "idShort": "InspectionDocumentsOfSteelProducts",
+  "submodelElements": [
+    {
+      "@id": "_:b3",
+      "@type": "SubmodelElementCollection",
+      "semanticId": {
+        "@id": "_:b4",
+        "@type": "Reference",
+        "keys": [
+          {
+            "@id": "_:b26",
+            "@type": "Key",
+            "type": "GlobalReference",
+            "value": "0173-1#01-AKG420#020"
+          }
+        ],
+        "type": "ExternalReference"
+      },
+      "qualifiers": [
+        {
+          "@id": "_:b5",
+          "@type": "Qualifier",
+          "semanticId": {
+            "@id": "_:b8",
+            "@type": "Reference",
+            "keys": [
+              {
+                "@id": "_:b9",
+                "@type": "Key",
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+              }
+            ],
+            "type": "ExternalReference"
+          },
+          "kind": "TemplateQualifier",
+          "type": "SMT/Cardinality",
+          "value": "ZeroToOne",
+          "valueType": "xs:string"
+        }
+      ],
+      "displayName": [
+        {
+          "@id": "_:b6",
+          "@type": "LangStringNameType",
+          "language": "de",
+          "text": [
+            {
+              "@id": "_:b25",
+              "@type": "LangStringNameType",
+              "language": "en",
+              "text": "Mechanical Tests"
+            },
+            "Mechanische Pr\u00fcfungen"
+          ]
+        }
+      ],
+      "idShort": "MechanicalTests",
+      "value": [
+        {
+          "@id": "_:b7",
+          "@type": "SubmodelElementCollection",
+          "semanticId": {
+            "@id": "_:b10",
+            "@type": "Reference",
+            "keys": [
+              {
+                "@id": "_:b24",
+                "@type": "Key",
+                "type": "GlobalReference",
+                "value": "https://w3id.org/steel/ProcessOntology/TensileTest"
+              }
+            ],
+            "type": "ExternalReference"
+          },
+          "qualifiers": [
+            {
+              "@id": "_:b11",
+              "@type": "Qualifier",
+              "semanticId": {
+                "@id": "_:b21",
+                "@type": "Reference",
+                "keys": [
+                  {
+                    "@id": "_:b22",
+                    "@type": "Key",
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                  }
+                ],
+                "type": "ExternalReference"
+              },
+              "kind": "TemplateQualifier",
+              "type": "SMT/Cardinality",
+              "value": "ZeroToMany",
+              "valueType": "xs:string"
+            }
+          ],
+          "displayName": [
+            {
+              "@id": "_:b12",
+              "@type": "LangStringNameType",
+              "language": "en",
+              "text": [
+                {
+                  "@id": "_:b23",
+                  "@type": "LangStringNameType",
+                  "language": "de",
+                  "text": "Zugversuch"
+                },
+                "Tensile Test"
+              ]
+            }
+          ],
+          "idShort": "TensileTest__00__",
+          "value": {
+            "@id": "_:b13",
+            "@type": "Property",
+            "semanticId": {
+              "@id": "_:b14",
+              "@type": "Reference",
+              "keys": [
+                {
+                  "@id": "_:b20",
+                  "@type": "Key",
+                  "type": "GlobalReference",
+                  "value": "https://w3id.org/steel/ProcessOntology/TensileStrength"
+                }
+              ],
+              "type": "ExternalReference"
+            },
+            "valueType": "xs:float",
+            "qualifiers": [
+              {
+                "@id": "_:b15",
+                "@type": "Qualifier",
+                "semanticId": {
+                  "@id": "_:b17",
+                  "@type": "Reference",
+                  "keys": [
+                    {
+                      "@id": "_:b18",
+                      "@type": "Key",
+                      "type": "GlobalReference",
+                      "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                    }
+                  ],
+                  "type": "ExternalReference"
+                },
+                "kind": "TemplateQualifier",
+                "type": "SMT/Cardinality",
+                "value": "ZeroToOne",
+                "valueType": "xs:string"
+              }
+            ],
+            "displayName": [
+              {
+                "@id": "_:b16",
+                "@type": "LangStringNameType",
+                "language": "en",
+                "text": [
+                  {
+                    "@id": "_:b19",
+                    "@type": "LangStringNameType",
+                    "language": "de",
+                    "text": "Zugfestigkeit Mittelwert"
+                  },
+                  "Tensile Strength Mean"
+                ]
+              }
+            ],
+            "idShort": "TensileStrengthMean",
+            "value": "782.094"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX fileid: <https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380/>
+PREFIX ns1: <prov:>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX aas: <https://admin-shell.io/aas/3/0/>
+PREFIX ns1: <https://admin-shell.io/aas/3/0/Reference/>
+PREFIX ns10: <https://admin-shell.io/aas/3/0/Qualifiable/>
+PREFIX ns11: <https://admin-shell.io/aas/3/0/HasSemantics/>
+PREFIX ns12: <https://admin-shell.io/aas/3/0/Property/>
+PREFIX ns13: <https://admin-shell.io/aas/3/0/SubmodelElementCollection/>
+PREFIX ns15: <https://admin-shell.io/aas/3/0/SubmodelElementList/>
+PREFIX ns2: <https://admin-shell.io/aas/3/0/Key/>
+PREFIX ns21: <https://admin-shell.io/aas/3/0/Submodel/>
+PREFIX ns22: <https://admin-shell.io/aas/3/0/HasKind/>
+PREFIX ns25: <https://admin-shell.io/aas/3/0/File/>
+PREFIX ns3: <https://admin-shell.io/aas/3/0/Qualifier/>
+PREFIX ns4: <https://admin-shell.io/aas/3/0/HasDataSpecification/>
+PREFIX ns5: <https://admin-shell.io/aas/3/0/Identifiable/>
+PREFIX ns6: <https://admin-shell.io/aas/3/0/AdministrativeInformation/>
+PREFIX ns7: <https://admin-shell.io/aas/3/0/AbstractLangString/>
+PREFIX ns8: <https://admin-shell.io/aas/3/0/Referable/>
+PREFIX ns9: <https://admin-shell.io/aas/3/0/DataSpecificationIec61360/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+CONSTRUCT {
+  ?model_iri a aas:Submodel ;
+    ns22:kind <https://admin-shell.io/aas/3/0/ModellingKind/Instance> ;
+    ns11:semanticId [ a aas:Reference ;
+            ns1:keys [ a aas:Key ;
+                    ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                    ns2:value "https://admin-shell.io/idta/SubmodelTemplate/InspectionDocumentsOfSteelProducts/1/0"^^xsd:string ] ;
+            ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+    ns5:administration [ ns6:revision "1"^^xsd:string ;
+            ns6:templateId "1"^^xsd:string ;
+            ns6:version "1"^^xsd:string ] ;
+    ns5:id ?model_str ;
+    ns8:displayName [ a aas:LangStringNameType ;
+            ns7:language "en"^^xsd:string ;
+            ns7:text "Inspection Documents for Steel Products"^^xsd:string ],
+        [ a aas:LangStringNameType ;
+            ns7:language "de"^^xsd:string ;
+            ns7:text "Prüfbescheinigung für Stahlprodukte"^^xsd:string ] ;
+    ns8:idShort "InspectionDocumentsOfSteelProducts"^^xsd:string ;
+    ns21:submodelElements 
+        [ a aas:SubmodelElementCollection ;
+            ns11:semanticId [ a aas:Reference ;
+                    ns1:keys [ a aas:Key ;
+                            ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                            ns2:value "0173-1#01-AKG420#020"^^xsd:string ] ;
+                    ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+            ns10:qualifiers [ a aas:Qualifier ;
+                    ns11:semanticId [ a aas:Reference ;
+                            ns1:keys [ a aas:Key ;
+                                    ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                                    ns2:value "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"^^xsd:string ] ;
+                            ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+                    ns3:kind <https://admin-shell.io/aas/3/0/QualifierKind/TemplateQualifier> ;
+                    ns3:type "SMT/Cardinality"^^xsd:string ;
+                    ns3:value "ZeroToOne"^^xsd:string ;
+                    ns3:valueType <https://admin-shell.io/aas/3/0/DataTypeDefXsd/xs:string> ] ;
+            ns8:displayName [ a aas:LangStringNameType ;
+                    ns7:language "de"^^xsd:string ;
+                    ns7:text "Mechanische Prüfungen"^^xsd:string ],
+                [ a aas:LangStringNameType ;
+                    ns7:language "en"^^xsd:string ;
+                    ns7:text "Mechanical Tests"^^xsd:string ] ;
+            ns8:idShort "MechanicalTests"^^xsd:string ;
+            ns13:value 
+                [ a aas:SubmodelElementCollection ;
+                    ns11:semanticId [ a aas:Reference ;
+                            ns1:keys [ a aas:Key ;
+                                    ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                                    ns2:value "https://w3id.org/steel/ProcessOntology/TensileTest"^^xsd:string ] ;
+                            ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+                    ns10:qualifiers [ a aas:Qualifier ;
+                            ns11:semanticId [ a aas:Reference ;
+                                    ns1:keys [ a aas:Key ;
+                                            ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                                            ns2:value "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"^^xsd:string ] ;
+                                    ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+                            ns3:kind <https://admin-shell.io/aas/3/0/QualifierKind/TemplateQualifier> ;
+                            ns3:type "SMT/Cardinality"^^xsd:string ;
+                            ns3:value "ZeroToMany"^^xsd:string ;
+                            ns3:valueType <https://admin-shell.io/aas/3/0/DataTypeDefXsd/xs:string> ] ;
+                    ns8:displayName [ a aas:LangStringNameType ;
+                            ns7:language "en"^^xsd:string ;
+                            ns7:text "Tensile Test"^^xsd:string ],
+                        [ a aas:LangStringNameType ;
+                            ns7:language "de"^^xsd:string ;
+                            ns7:text "Zugversuch"^^xsd:string ] ;
+                    ns8:idShort "TensileTest__00__"^^xsd:string ;
+                    ns13:value 
+                        [ a aas:Property ;
+                            ns11:semanticId [ a aas:Reference ;
+                                    ns1:keys [ a aas:Key ;
+                                            ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                                            ns2:value "https://w3id.org/steel/ProcessOntology/TensileStrength"^^xsd:string ] ;
+                                    ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+                            ns12:valueType <https://admin-shell.io/aas/3/0/DataTypeDefXsd/xs:float> ;
+                            aas:value ?tensileStrengthValue ;
+                            ns10:qualifiers [ a aas:Qualifier ;
+                                    ns11:semanticId [ a aas:Reference ;
+                                            ns1:keys [ a aas:Key ;
+                                                    ns2:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
+                                                    ns2:value "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"^^xsd:string ] ;
+                                            ns1:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
+                                    ns3:kind <https://admin-shell.io/aas/3/0/QualifierKind/TemplateQualifier> ;
+                                    ns3:type "SMT/Cardinality"^^xsd:string ;
+                                    ns3:value "ZeroToOne"^^xsd:string ;
+                                    ns3:valueType <https://admin-shell.io/aas/3/0/DataTypeDefXsd/xs:string> ] ;
+                            ns8:displayName [ a aas:LangStringNameType ;
+                                    ns7:language "en"^^xsd:string ;
+                                    ns7:text "Tensile Strength Mean"^^xsd:string ],
+                                [ a aas:LangStringNameType ;
+                                    ns7:language "de"^^xsd:string ;
+                                    ns7:text "Zugfestigkeit Mittelwert"^^xsd:string ] ;
+                            ns8:idShort "TensileStrengthMean"^^xsd:string ] ] ] .
+}
+WHERE {
+  ?dataset a dcat:Dataset .
+  BIND(STR(?dataset) AS ?datasetStr)
+  BIND(REPLACE(?datasetStr, "/dataset", "") AS ?model_str)
+  BIND(IRI(?model_str) AS ?model_iri)
+
+  fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
+    qudt:value ?tensileStrengthValue .
+}

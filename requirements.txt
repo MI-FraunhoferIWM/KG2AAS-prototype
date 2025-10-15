@@ -1,0 +1,4 @@
+rdflib>=6,<7
+PyLD>=2,<2.1
+jsonschema>=4.25.0,<5
+requests

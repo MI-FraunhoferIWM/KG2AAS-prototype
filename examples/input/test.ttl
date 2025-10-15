@@ -1,0 +1,70 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fileid: <https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380/> .
+@prefix ns1: <prov:> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fileid:dataset a dcat:Dataset ;
+    dcterms:hasPart fileid:Dictionary ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcat:accessURL "https://www.example.org/download"^^xsd:anyURI ;
+            dcat:mediaType "https://www.iana.org/assignments/media-types/application/json"^^xsd:anyURI ] .
+
+fileid:Dictionary a ns1:Dictionary ;
+    ns1:hadDictionaryMember [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:ModulusOfElasticity ] ;
+            ns1:pairKey "ModulusOfElasticity"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:ProofStrength_0.2Percentage ] ;
+            ns1:pairKey "ProofStrength_0.2Percentage"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:MassDensity ] ;
+            ns1:pairKey "MassDensity"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:YieldStress ] ;
+            ns1:pairKey "YieldStress"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:UniformElongation ] ;
+            ns1:pairKey "UniformElongation"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:TensileStrength ] ;
+            ns1:pairKey "TensileStrength"^^xsd:string ],
+        [ a ns1:KeyEntityPair ;
+            ns1:pairEntity [ a ns1:Entity ;
+                    qudt:quantity fileid:PoissonRatio ] ;
+            ns1:pairKey "PoissonRatio"^^xsd:string ] .
+
+fileid:MassDensity a <https://w3id.org/steel/ProcessOntology/MassDensity> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/KiloGM-PER-L"^^xsd:anyURI ;
+    qudt:value "200000.0"^^xsd:float .
+
+fileid:ModulusOfElasticity a <https://w3id.org/steel/ProcessOntology/ModulusOfElasticity> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    qudt:value "208997.842"^^xsd:float .
+
+fileid:PoissonRatio a <https://w3id.org/steel/ProcessOntology/PoissonRatio> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/NUM"^^xsd:anyURI ;
+    qudt:value "0.3"^^xsd:float .
+
+fileid:ProofStrength_0.2Percentage a <https://w3id.org/steel/ProcessOntology/ProofStrength_0.2Percentage> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    qudt:value "509.255"^^xsd:float .
+
+fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    qudt:value "782.094"^^xsd:float .
+
+fileid:UniformElongation a <https://w3id.org/steel/ProcessOntology/UniformElongation> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/NUM"^^xsd:anyURI ;
+    qudt:value "0.116"^^xsd:float .
+
+fileid:YieldStress a <https://w3id.org/steel/ProcessOntology/YieldStress> ;
+    qudt:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    qudt:value "260.008"^^xsd:float .
