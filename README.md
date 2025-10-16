@@ -53,7 +53,7 @@ json_ld = json.loads(result)
 
 The output is a AAS serialized in JSON-LD.
 
-#### 1.3.3 JSON LD Framing
+#### 1.3.2 JSON LD Framing
 
 The JSON LD context is used for framing the resulting AAS in JSON LD from the previous step into the official AAS JSON Schema according. 
 
@@ -141,7 +141,7 @@ for node in output["@graph"]:
 
 ```
 
-### 1.3.4 JSON Schema validation
+### 1.3.3 JSON Schema validation
 
 In order to make sure that the JSON body after framing is compliant to the AAS metamodel schema, we are applying a schema validation of our document against the official [AAS JSON Schema](https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json). We can do this by using the JSON-Schema library in Python:
 
