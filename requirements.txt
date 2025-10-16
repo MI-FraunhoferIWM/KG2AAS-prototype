@@ -1,4 +1,5 @@
-rdflib>=6,<7
+rdflib>=7,<8
 PyLD>=2,<2.1
 jsonschema>=4.25.0,<5
 requests
+git+https://github.com/eclipse-basyx/basyx-python-sdk.git@6bd05e54fbe6c78b30dd0926a37f8741a64d42ca
