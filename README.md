@@ -4,32 +4,41 @@ This repository is demonstrating a simple proof of concept for the transformatio
 
 This repository **does not** contain modularized and packaged software, but more of a guideline how semantic technologies like **SPARQL** and **JSON LD** can be used to transform data models between both reference frameworks, TLOs (Top level ontologies) and AAS.
 
+
 ## 1. General workflow
 
 ![figure1](static/AAS_KG.png)
 
 As input we expecting the following implementations:
 
-* The Knowledge graph expressed in OWL
-* A SPARQL Construct Query
-* A JSON LD Context Mapping
-* Some minimal manual wrangling using REGEX, executed in a suitable programming language (e.g. Python) 
-* The AAS Metamodel JSON Schema
+* The Knowledge graph (KG) expressed in OWL - *this input is different for each pipeline configuration*
+* A SPARQL Construct Query - *this input is different for each pipeline configuration*
+* A JSON LD Context Mapping - *this is reusable for each pipeline scenario*
+* Some minimal manual wrangling using REGEX, executed in a suitable programming language (e.g. Python) - *this is reusable for each pipeline scenario*
+* The AAS Metamodel JSON Schema - *this is reusable for each pipeline scenario*
 
 Expected output:
 
-* A validated AAS (serialized in JSON) with metadata from the input KG 
+* A validated AAS instance (serialized in JSON) with metadata from the input KG 
 
-### 1.1 Prodcedure
+## 1.1 Known limitations
 
-#### 1.1.1 SPARQL Construct
+* Any input knowledge graph in OWL as well as any output AAS has a dedicated structure and pattern. This means that any SPARQL Construct needs to be specifically developed according to both.
+* Currently, the provided `@context` from JSON-LD is not properly framing all JSON-property-keys of objects like `Property`, `Referable` and `Qualifier` like `aas:Property/value`, `aas:Qualifier/value` according to the official AAS Metamodel JSON Schema. This is why we need some manual wrangling of the JSON using REGEX and other filtering. This is explain in more detail in section [1.2.2](#122-json-ld-framing)
+* The `SemanticID` from AAS generally expects a single class reference for each `Property`, such as e.g. `MeanTensileStrength` from the [Inspection Documents of Steel Products](https://github.com/admin-shell-io/submodel-templates/tree/9709bdfc0343fc6fd80fd4149c1cda6449a5515c/published/Inspection%20Documents%20of%20Steel%20Products/1/0). This might be a generall mismatch when mapping to the input KG in OWL, since Top-level ontologies (TLOs) generally do not define extra classes for the context (e.g. mean, min, max, standard deviation, etc.) of each physical property such as `TensileStrength` but rather describe it by the usage of multiple class instances and respective object properties (e.g. `pmd:Material`-`hasMeanProperty`->`pmd:TensileStrength`-`qudt:value`-> `784.094^^xsd:float`)
 
-#### 1.1.1.1 Setting up the query
+## 1.2 Prodcedure
+
+In the following chapter, we will explain step by step the proposed pipeline. The full script written in Python can be found under [examples/demo.py](examples/demo.py)
+
+### 1.2.1 SPARQL Construct
+
+#### 1.2.1.1 Setting up the query
 
 The SPARQL query generally needs to have two parts:
 
-* The WHERE-part, which is traversing nodes of the input KG in OWL and fetching the metadata to be reflected in the AAS (Lower part)
-* The CONSTRUCT-part, which is setting up the AAS datamodel according to the official AAS metamodel ontology and the corresponding AAS template of interest (Upper part)
+* The WHERE-part, which is traversing nodes of the input KG in OWL and fetching the metadata to be reflected in the AAS (Lower part of the query)
+* The CONSTRUCT-part, which is setting up the AAS datamodel according to the official AAS metamodel ontology and the corresponding AAS template of interest (Upper part of the query)
 
 ```{sparql}
 CONSTRUCT {
@@ -98,17 +107,17 @@ See the following snippet as example:
             ns3:language "de"^^xsd:string ;
             ns3:text "Zugfestigkeit Mittelwert"^^xsd:string ] ;
     ns5:idShort "TensileStrengthMean"^^xsd:string ,
-    aas:Property/value ?tensile_strength
+    aas:Property/value "784.094"^xsd:float
 ],
 
 ...
 ```
 
-One now simply needs to exchange the hardcoded values of the AAS-instance with variables which are originating from the WHERE-part (with the knowledge graph to be queried). For this, please note the very last line with `aas:Property/value ?tensile_strength`, which contains the `?tensile_strength`-variable to be manually inserted instead of an originally hardcoded value such as e.g. `aas:Property/value "784.094"^xsd:float`.
+Please note the very last line with `aas:Property/value "784.094"^xsd:float`, which contains a hardcoded value (`"784.094"^xsd:float`) to be manually replaced with a variable (e.g. `?tensile_strength`) corresponding to a variable with the same name from the WHERE-part.
 
 After inserting this model with the variables into the CONSTRUCT-part, the WHERE-part needs to be defined.
 
-Lets consider a very simple knowledge graph with a couple of entities:
+Let's consider a very simple knowledge graph with a couple of entities:
 
 ```turtle
 fileid:ModulusOfElasticity a <https://w3id.org/steel/ProcessOntology/ModulusOfElasticity> ;
@@ -142,7 +151,7 @@ fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength
 
 The full mapping expressed by the SPARQL Construct can be found under [examples/input/mapping.sparql](examples/input/mapping.sparql).
 
-#### 1.1.1.2 Executing the query
+#### 1.2.1.2 Executing the query
 
 By using any SPARQL Engine in reference implementations like RDFLib, pyoxigraph, etc. and the SPARQL Construct defined in the previous section, we can transform the KG model into the AAS model we have defined in the query.
 
@@ -157,9 +166,9 @@ result = g.query(<your-sparql-construct>).serialize(format="json-ld")
 json_ld = json.loads(result)
 ```
 
-The output is an AAS serialized in JSON-LD.
+The output of this step is an AAS serialized in JSON-LD.
 
-#### 1.1.2 JSON LD Framing
+### 1.2.2 JSON LD Framing
 
 The JSON LD context is used for framing the resulting AAS in JSON LD from the previous step into the official AAS JSON Schema according. 
 
@@ -208,6 +217,8 @@ An extraction of an example context may look like this:
     }
 ```
 
+The full `@context` can be found under [examples/input/frame_slim.json](examples/input/frame_slim.json), which was originally derived from the officially released [AAS JSON LD Contexts from GitHub](https://github.com/aas-core-works/aas-core-codegen/blob/a35fd9ad254759d938a1aa7789775c7f4aba5e07/test_data/jsonld_context/context.jsonld).
+
 We are working here with global and local `@contexts` in the frame, since the official AAS Json Schema is expecting keys like `value`, `type` or `valueType` in multiple objects like `Property`, `Referable` and `Qualifier`, which are expressed through different IRIs in the different contexts, such as `aas:Property/value`, `aas:Property/valueType`, `aas:Qualifier/valueType`, `aas:Qualifier/value`, etc.
 
 The framing can be executed by using the `pyld` library in the following code snippet:
@@ -241,15 +252,17 @@ output = json.loads(result)
 # get submodel node
 for node in output["@graph"]:
     node_type = node.get("@type")
-    if node_type == target_type:
+    if node_type == "Submodel":
         output = node
         break
 
 ```
 
-### 1.1.3 JSON Schema validation
+The regex is thereby replacing remanent keys like `aas:Property/value` or `aas:value` with `value`. The second step simply filters the JSON Body in order to return the `Submodel` of interest.
 
-In order to make sure that the JSON body after framing is compliant to the AAS metamodel schema, we are applying a schema validation of our document against the official [AAS JSON Schema](https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json). We can do this by using the JSON-Schema library in Python:
+### 1.2.3 JSON Schema validation
+
+In order to make sure that the JSON body after framing is compliant to the AAS metamodel schema, we are applying a schema validation of our document against the official [AAS JSON Schema from GitHub](https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json). We can do this by using the JSON-Schema library in Python:
 
 ```{python}
 import requests
@@ -260,7 +273,9 @@ aas_json_schema = "https://raw.githubusercontent.com/admin-shell-io/aas-specs/re
 validate(output, requests.get(aas_json_schema).json())
 ```
 
-If no error if thrown, the JSON document should be compliant towards the standard. However, the validation is expecting that the top-level object is an `AssetAdministrationShell`, not any other type like `Submodel`, `SubmodelElementCollection`, etc. since they **MUST** be embedded into the `AssetAdministrationShell`-Object.
+If no error if thrown, the JSON document should be compliant towards the standard. However, the validation is expecting that the top-level object is an `AssetAdministrationShell`, not any other type like `Submodel`, `SubmodelElementCollection`, etc. since they **MUST** be embedded into the `AssetAdministrationShell`-Object. Please note that there will be artifact objects and keys like `@id` and `@type` from the JSON-LD. However, since JSON Schema allows extra properties to be defined, this usually is not an issue during validation as long as all required properties of the defined objects are provided.
+
+An example output of the workflow can be found under [examples/output/output.json](examples/output/output.json). 
 
 ## 2. Requirements
 
