@@ -40,7 +40,7 @@ The SPARQL query generally needs to have two parts:
 * The WHERE-part, which is traversing nodes of the input KG in OWL and fetching the metadata to be reflected in the AAS (Lower part of the query)
 * The CONSTRUCT-part, which is setting up the AAS datamodel according to the official AAS metamodel ontology and the corresponding AAS template of interest (Upper part of the query)
 
-```{sparql}
+```sparql
 CONSTRUCT {
   <The AAS model according to the template goes here>
 }
@@ -51,7 +51,7 @@ WHERE {
 
 The CONSTRUCT-part can be easily derived by transforming an `.aasx`-reference instance of the targeted `AAS`-template by using the `basyx-python-sdk` (`Experimental/Adapter/RDF`-sidebranch):
 
-```{python}
+```py
 import os
 from basyx.aas import model
 from basyx.aas.adapter.aasx import AASXReader, DictSupplementaryFileContainer
@@ -79,9 +79,7 @@ The full `model.json`, `model.aasx`, `model.ttl` can be found under [examples/aa
 The `model.ttl`-output from this script then contains the RDF-model of the AAS to be targeted by the SPARQL Constuct Query. 
 See the following snippet as example:
 
-```{turtle}
-...
-
+```turtle
 [ 
     a aas:Property ;
     ns6:semanticId [ a aas:Reference ;
@@ -108,9 +106,7 @@ See the following snippet as example:
             ns3:text "Zugfestigkeit Mittelwert"^^xsd:string ] ;
     ns5:idShort "TensileStrengthMean"^^xsd:string ,
     aas:Property/value "784.094"^xsd:float
-],
-
-...
+] .
 ```
 
 Please note the very last line with `aas:Property/value "784.094"^xsd:float`, which contains a hardcoded value (`"784.094"^xsd:float`) to be manually replaced with a variable (e.g. `?tensile_strength`) corresponding to a variable with the same name from the WHERE-part.
@@ -144,7 +140,7 @@ These mechanical properties can be semantically described within a characterizat
 
 In order to extract the needed `?tensile_strength` for the AAS from this KG, we can simply write the following WHERE-part for our SPARQL Query:
 
-```{turtle}
+```turtle
 fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
                        qudt:value ?tensile_strength .
 ```
@@ -155,7 +151,7 @@ The full mapping expressed by the SPARQL Construct can be found under [examples/
 
 By using any SPARQL Engine in reference implementations like RDFLib, pyoxigraph, etc. and the SPARQL Construct defined in the previous section, we can transform the KG model into the AAS model we have defined in the query.
 
-```{python}
+```py
 import json
 from rdflib import Graph
 
@@ -174,7 +170,7 @@ The JSON LD context is used for framing the resulting AAS in JSON LD from the pr
 
 An extraction of an example context may look like this:
 
-```{json}
+```json
 {
   "@context": {
     "aas": "https://admin-shell.io/aas/3/0/",
@@ -223,7 +219,7 @@ We are working here with global and local `@contexts` in the frame, since the of
 
 The framing can be executed by using the `pyld` library in the following code snippet:
 
-```{python}
+```py
 from pyld import jsonld
 
 json_ld = jsonld.frame(json_ld, frame)
@@ -238,7 +234,7 @@ This leads to the current need to perfrom small operations like string replaceme
 
 At the moment, it is solved like this:
 
-```{python}
+```py
 import re
 import json
 
@@ -264,7 +260,7 @@ The regex is thereby replacing remanent keys like `aas:Property/value` or `aas:v
 
 In order to make sure that the JSON body after framing is compliant to the AAS metamodel schema, we are applying a schema validation of our document against the official [AAS JSON Schema from GitHub](https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json). We can do this by using the JSON-Schema library in Python:
 
-```{python}
+```py
 import requests
 from jsonschema import validate
 
