@@ -1,9 +1,8 @@
-# Knowledge Graph to AAS Prototype
+# Knowledge Graph to AAS — Prototype
 
-This repository is demonstrating a simple proof of concept for the transformation of a knowledge graph (KG) written in RDF (Resource Description Framework) - which can be formulated according to PMDCo (Platform Material Digital Core Ontology), EMMO (Elementary Multiperspective Materials Ontology) or other ontologies - to an Asset Administration Shell (AAS).
+This repository provides a proof of concept for transforming a knowledge graph (KG) expressed in RDF (Resource Description Framework) into an Asset Administration Shell (AAS). The KG can be modeled according to ontologies such as PMDCo (Platform Material Digital Core Ontology), EMMO (Elementary Multiperspective Materials Ontology), or other relevant frameworks.
 
-This repository **does not** contain modularized and packaged software, but more of a guideline how semantic technologies like **SPARQL** and **JSON LD** can be used to transform data models between both reference frameworks, TLOs (Top level ontologies) and AAS.
-
+This repository is not intended as a fully modular or packaged software solution. Instead, it serves as a guideline for leveraging semantic technologies, such as SPARQL and JSON-LD, to map and transform data models between top-level ontologies (TLOs) and the AAS framework.
 
 ## 1. General workflow
 
