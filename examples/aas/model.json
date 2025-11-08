@@ -8340,18 +8340,6 @@
                         "valueList": {
                             "valueReferencePairs": [
                                 {
-                                    "value": "ConsigneeOfCertificate",
-                                    "valueId": {
-                                        "type": "ExternalReference",
-                                        "keys": [
-                                            {
-                                                "type": "GlobalReference",
-                                                "value": "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/ConsigneeOfCertificate/1/0"
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
                                     "value": "Purchaser",
                                     "valueId": {
                                         "type": "ExternalReference",
@@ -8371,6 +8359,18 @@
                                             {
                                                 "type": "GlobalReference",
                                                 "value": "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/Consignee/1/0"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "value": "ConsigneeOfCertificate",
+                                    "valueId": {
+                                        "type": "ExternalReference",
+                                        "keys": [
+                                            {
+                                                "type": "GlobalReference",
+                                                "value": "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/ConsigneeOfCertificate/1/0"
                                             }
                                         ]
                                     }
