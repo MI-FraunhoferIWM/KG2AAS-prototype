@@ -1,6 +1,5 @@
 prefix dcat: <http://www.w3.org/ns/dcat#>
 prefix dcterms: <http://purl.org/dc/terms/>
-prefix fileid: <https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380/>
 prefix qudt: <http://qudt.org/schema/qudt/>
 prefix ns1: <https://admin-shell.io/aas/3/0/>
 prefix ns10: <https://admin-shell.io/aas/3/0/Identifiable/>
@@ -2229,23 +2228,23 @@ CONSTRUCT {
         ns10:id "https://admin-shell.io/idta/InspectionDocumentsOfSteelProducts/YieldOrProofStrengthMean/1/0" ;
         ns8:idShort "YieldOrProofStrengthMean" .
 
-        <https://materials-data.space/ids/aas/2333_6052_8052_0194> a ns1:AssetAdministrationShell ;
-        ns19:assetInformation <https://materials-data.space/ids/asset/3533_6052_8052_4641> ;
+        <https://example.org/AAS> a ns1:AssetAdministrationShell ;
+        ns19:assetInformation <https://example.org/AssetInfo> ;
         ns19:submodels [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/Submodel> ;
-                        ns6:value "https://materials-data.space/ids/sm/7343_6052_8052_9441" ;
+                        ns6:value "https://example.org/Submodel" ;
                         ns1:index 0 ] ;
                 ns4:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ModelReference> ;
                 ns1:index 0 ] ;
-        ns10:id "https://materials-data.space/ids/aas/2333_6052_8052_0194" ;
+        ns10:id "https://example.org/AAS" ;
         ns8:displayName [ a ns1:LangStringNameType ;
                 ns5:language "en" ;
                 ns5:text "Instance - Inspection Documents of Steel Products v1.0" ;
                 ns1:index 0 ] ;
         ns8:idShort "InspectionDocumentsOfSteelProductsAAS" .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441> a ns1:Submodel ;
+        <https://example.org/Submodel> a ns1:Submodel ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2256,7 +2255,7 @@ CONSTRUCT {
                 ns13:revision "0" ;
                 ns13:templateId "https://admin-shell.io/idta/02032-1-0" ;
                 ns13:version "1" ] ;
-        ns10:id "https://materials-data.space/ids/sm/7343_6052_8052_9441" ;
+        ns10:id "https://example.org/Submodel" ;
         ns8:displayName [ a ns1:LangStringNameType ;
                 ns5:language "en" ;
                 ns5:text "Inspection Documents for Steel Products" ;
@@ -2266,23 +2265,23 @@ CONSTRUCT {
                 ns5:text "Prüfbescheinigung für Stahlprodukte" ;
                 ns1:index 0 ] ;
         ns8:idShort "InspectionDocumentsOfSteelProducts" ;
-        ns18:submodelElements <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation> .
+        ns18:submodelElements <https://example.org/submodel-elements/ChemicalAnalysis>,
+                <https://example.org/submodel-elements/Customer__00__>,
+                <https://example.org/submodel-elements/Manufacturer>,
+                <https://example.org/submodel-elements/MechanicalTests>,
+                <https://example.org/submodel-elements/OrderData>,
+                <https://example.org/submodel-elements/ProductData>,
+                <https://example.org/submodel-elements/Validation> .
 
-        <https://materials-data.space/ids/asset/3533_6052_8052_4641> a ns1:AssetInformation ;
+        <https://example.org/AssetInfo> a ns1:AssetInformation ;
         ns17:assetKind <https://admin-shell.io/aas/3/0/AssetKind/Instance> ;
         ns17:assetType "Type" ;
         ns17:defaultThumbnail [ a ns1:Resource ;
                 ns20:contentType "image/png" ;
                 ns20:path "/aasx/files/IDTA-02032-1-0_Submodel-Inspecon-Documents-of-Steel-Products-Title.png" ] ;
-        ns17:globalAssetId "https://materials-data.space/ids/asset/3533_6052_8052_4641" .
+        ns17:globalAssetId "https://example.org/AssetInfo" .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ChemicalAnalysis> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2310,28 +2309,28 @@ CONSTRUCT {
                 ns5:text "Chemische Analyse" ;
                 ns1:index 0 ] ;
         ns8:idShort "ChemicalAnalysis" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Al>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Be>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_C>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Cr>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Cu>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Mn>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Mo>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_N>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Nb>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ni>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_P>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Pb>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_S>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Si>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ta>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ti>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_V>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_W>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.SteelmakingProcess> ;
+        ns15:value <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Al>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Be>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_C>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Cr>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Cu>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Mn>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Mo>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_N>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Nb>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ni>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_P>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Pb>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_S>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Si>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ta>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ti>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_V>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_W>,
+                <https://example.org/submodel-elements/ChemicalAnalysis.SteelmakingProcess> ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Al> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Al> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2362,7 +2361,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Al" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Be> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Be> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2393,7 +2392,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Be" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_C> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_C> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2424,7 +2423,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_C" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Cr> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Cr> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2455,7 +2454,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Cr" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Cu> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Cu> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2486,7 +2485,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Cu" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Mn> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Mn> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2517,7 +2516,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Mn" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Mo> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Mo> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2548,7 +2547,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Mo" ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_N> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_N> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2579,7 +2578,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_N" ;
         ns1:index 7 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Nb> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Nb> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2610,7 +2609,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Nb" ;
         ns1:index 8 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ni> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ni> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2641,7 +2640,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Ni" ;
         ns1:index 9 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_P> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_P> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2672,7 +2671,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_P" ;
         ns1:index 10 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Pb> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Pb> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2703,7 +2702,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Pb" ;
         ns1:index 11 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_S> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_S> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2734,7 +2733,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_S" ;
         ns1:index 12 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Si> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Si> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2765,7 +2764,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Si" ;
         ns1:index 13 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ta> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ta> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2796,7 +2795,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Ta" ;
         ns1:index 14 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_Ti> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_Ti> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2827,7 +2826,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_Ti" ;
         ns1:index 15 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_V> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_V> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2858,7 +2857,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_V" ;
         ns1:index 16 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.MassFraction_W> a ns1:Property ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.MassFraction_W> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2889,7 +2888,7 @@ CONSTRUCT {
         ns8:idShort "MassFraction_W" ;
         ns1:index 17 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ChemicalAnalysis.SteelmakingProcess> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/ChemicalAnalysis.SteelmakingProcess> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2919,7 +2918,7 @@ CONSTRUCT {
         ns8:idShort "SteelmakingProcess" ;
         ns1:index 18 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/Customer__00__> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2947,16 +2946,16 @@ CONSTRUCT {
                 ns5:text "Kunde" ;
                 ns1:index 0 ] ;
         ns8:idShort "Customer__00__" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.City>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.CompanyName>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.CustomerRole>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.MailAddress__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.NationalCode>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.Street>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.ZIPCode> ;
+        ns15:value <https://example.org/submodel-elements/Customer__00__.City>,
+                <https://example.org/submodel-elements/Customer__00__.CompanyName>,
+                <https://example.org/submodel-elements/Customer__00__.CustomerRole>,
+                <https://example.org/submodel-elements/Customer__00__.MailAddress__00__>,
+                <https://example.org/submodel-elements/Customer__00__.NationalCode>,
+                <https://example.org/submodel-elements/Customer__00__.Street>,
+                <https://example.org/submodel-elements/Customer__00__.ZIPCode> ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.City> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.City> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -2987,7 +2986,7 @@ CONSTRUCT {
         ns8:idShort "City" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.CompanyName> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.CompanyName> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3018,7 +3017,7 @@ CONSTRUCT {
         ns8:idShort "CompanyName" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.CustomerRole> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.CustomerRole> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3103,7 +3102,7 @@ CONSTRUCT {
         ns8:idShort "CustomerRole" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.MailAddress__00__> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.MailAddress__00__> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3134,7 +3133,7 @@ CONSTRUCT {
         ns8:idShort "MailAddress__00__" ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.NationalCode> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.NationalCode> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3165,7 +3164,7 @@ CONSTRUCT {
         ns8:idShort "NationalCode" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.Street> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.Street> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3196,7 +3195,7 @@ CONSTRUCT {
         ns8:idShort "Street" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Customer__00__.ZIPCode> a ns1:Property ;
+        <https://example.org/submodel-elements/Customer__00__.ZIPCode> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3227,7 +3226,7 @@ CONSTRUCT {
         ns8:idShort "ZIPCode" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/Manufacturer> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3255,15 +3254,15 @@ CONSTRUCT {
                 ns5:text "Hersteller" ;
                 ns1:index 0 ] ;
         ns8:idShort "Manufacturer" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.City>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.CompanyName>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.MailAddress__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.NationalCode>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.Street>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.ZIPCode> ;
+        ns15:value <https://example.org/submodel-elements/Manufacturer.City>,
+                <https://example.org/submodel-elements/Manufacturer.CompanyName>,
+                <https://example.org/submodel-elements/Manufacturer.MailAddress__00__>,
+                <https://example.org/submodel-elements/Manufacturer.NationalCode>,
+                <https://example.org/submodel-elements/Manufacturer.Street>,
+                <https://example.org/submodel-elements/Manufacturer.ZIPCode> ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.City> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.City> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3294,7 +3293,7 @@ CONSTRUCT {
         ns8:idShort "City" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.CompanyName> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.CompanyName> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3325,7 +3324,7 @@ CONSTRUCT {
         ns8:idShort "CompanyName" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.MailAddress__00__> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.MailAddress__00__> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3356,7 +3355,7 @@ CONSTRUCT {
         ns8:idShort "MailAddress__00__" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.NationalCode> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.NationalCode> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3387,7 +3386,7 @@ CONSTRUCT {
         ns8:idShort "NationalCode" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.Street> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.Street> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3418,7 +3417,7 @@ CONSTRUCT {
         ns8:idShort "Street" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Manufacturer.ZIPCode> a ns1:Property ;
+        <https://example.org/submodel-elements/Manufacturer.ZIPCode> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3449,7 +3448,7 @@ CONSTRUCT {
         ns8:idShort "ZIPCode" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/MechanicalTests> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3477,12 +3476,12 @@ CONSTRUCT {
                 ns5:text "Mechanical Tests" ;
                 ns1:index 1 ] ;
         ns8:idShort "MechanicalTests" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__> ;
+        ns15:value <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__> ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3510,15 +3509,15 @@ CONSTRUCT {
                 ns5:text "Härteprüfung" ;
                 ns1:index 0 ] ;
         ns8:idShort "HardnessTest__00__" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.DirectionOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessMean>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessTestingMethod>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.LocationOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.TestTemperature> ;
+        ns15:value <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.DirectionOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessMean>,
+                <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessTestingMethod>,
+                <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.LocationOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.TestTemperature> ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.DirectionOfSample__00__> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.DirectionOfSample__00__> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3548,7 +3547,7 @@ CONSTRUCT {
         ns8:idShort "DirectionOfSample__00__" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3587,7 +3586,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/String> ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3618,7 +3617,7 @@ CONSTRUCT {
         ns8:idShort "HardnessMean" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessTestingMethod> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.HardnessTestingMethod> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3649,7 +3648,7 @@ CONSTRUCT {
         ns8:idShort "HardnessTestingMethod" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.LocationOfSample__00__> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.LocationOfSample__00__> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3679,7 +3678,7 @@ CONSTRUCT {
         ns8:idShort "LocationOfSample__00__" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.HardnessTest__00__.TestTemperature> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.HardnessTest__00__.TestTemperature> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3710,7 +3709,7 @@ CONSTRUCT {
         ns8:idShort "TestTemperature" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3738,18 +3737,18 @@ CONSTRUCT {
                 ns5:text "Kerbschlagbiegeversuch" ;
                 ns1:index 0 ] ;
         ns8:idShort "NotchImpactTest__00__" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.DirectionOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.LocationOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthMean>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkMean>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleType>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleWidth>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.TestTemperature> ;
+        ns15:value <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.DirectionOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.LocationOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthMean>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkMean>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleType>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleWidth>,
+                <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.TestTemperature> ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.DirectionOfSample__00__> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.DirectionOfSample__00__> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3780,7 +3779,7 @@ CONSTRUCT {
         ns8:idShort "DirectionOfSample__00__" ;
         ns1:index 8 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.LocationOfSample__00__> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.LocationOfSample__00__> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3811,7 +3810,7 @@ CONSTRUCT {
         ns8:idShort "LocationOfSample__00__" ;
         ns1:index 7 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3850,7 +3849,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactStrengthMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3881,7 +3880,7 @@ CONSTRUCT {
         ns8:idShort "NotchImpactStrengthMean" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3920,7 +3919,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.NotchImpactWorkMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3951,7 +3950,7 @@ CONSTRUCT {
         ns8:idShort "NotchImpactWorkMean" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleType> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleType> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -3982,7 +3981,7 @@ CONSTRUCT {
         ns8:idShort "SampleType" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleWidth> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.SampleWidth> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4013,7 +4012,7 @@ CONSTRUCT {
         ns8:idShort "SampleWidth" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.NotchImpactTest__00__.TestTemperature> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.NotchImpactTest__00__.TestTemperature> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4044,7 +4043,7 @@ CONSTRUCT {
         ns8:idShort "TestTemperature" ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4072,19 +4071,19 @@ CONSTRUCT {
                 ns5:text "Tensile Test" ;
                 ns1:index 1 ] ;
         ns8:idShort "TensileTest__00__" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.DirectionOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureMean>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.LocationOfSample__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.SampleShape>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthMean>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TestTemperature>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthIndividualValues>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthMean> ;
+        ns15:value <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.DirectionOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureMean>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.LocationOfSample__00__>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.SampleShape>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthMean>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TestTemperature>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthIndividualValues>,
+                <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthMean> ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.DirectionOfSample__00__> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.DirectionOfSample__00__> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4114,7 +4113,7 @@ CONSTRUCT {
         ns8:idShort "DirectionOfSample__00__" ;
         ns1:index 9 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4153,7 +4152,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.ElongationAfterFractureMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4184,7 +4183,7 @@ CONSTRUCT {
         ns8:idShort "ElongationAfterFractureMean" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.LocationOfSample__00__> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.LocationOfSample__00__> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4214,7 +4213,7 @@ CONSTRUCT {
         ns8:idShort "LocationOfSample__00__" ;
         ns1:index 8 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.SampleShape> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.SampleShape> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4244,7 +4243,7 @@ CONSTRUCT {
         ns8:idShort "SampleShape" ;
         ns1:index 7 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4283,7 +4282,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TensileStrengthMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4315,7 +4314,7 @@ CONSTRUCT {
         ns8:idShort "TensileStrengthMean" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.TestTemperature> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.TestTemperature> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4346,7 +4345,7 @@ CONSTRUCT {
         ns8:idShort "TestTemperature" ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthIndividualValues> a ns1:SubmodelElementList ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthIndividualValues> a ns1:SubmodelElementList ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4384,7 +4383,7 @@ CONSTRUCT {
         ns16:valueTypeListElement <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthMean> a ns1:Property ;
+        <https://example.org/submodel-elements/MechanicalTests.TensileTest__00__.YieldOrProofStrengthMean> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4415,7 +4414,7 @@ CONSTRUCT {
         ns8:idShort "YieldOrProofStrengthMean" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/OrderData> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4443,14 +4442,14 @@ CONSTRUCT {
                 ns5:text "Order Data" ;
                 ns1:index 1 ] ;
         ns8:idShort "OrderData" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.DeliveryNoteNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.ManufacturerOrderNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.OrderDate>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.PurchaserOrderNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.TypeOfInspectionDocument> ;
+        ns15:value <https://example.org/submodel-elements/OrderData.DeliveryNoteNumber>,
+                <https://example.org/submodel-elements/OrderData.ManufacturerOrderNumber>,
+                <https://example.org/submodel-elements/OrderData.OrderDate>,
+                <https://example.org/submodel-elements/OrderData.PurchaserOrderNumber>,
+                <https://example.org/submodel-elements/OrderData.TypeOfInspectionDocument> ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.DeliveryNoteNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/OrderData.DeliveryNoteNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4481,7 +4480,7 @@ CONSTRUCT {
         ns8:idShort "DeliveryNoteNumber" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.ManufacturerOrderNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/OrderData.ManufacturerOrderNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4512,7 +4511,7 @@ CONSTRUCT {
         ns8:idShort "ManufacturerOrderNumber" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.OrderDate> a ns1:Property ;
+        <https://example.org/submodel-elements/OrderData.OrderDate> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4543,7 +4542,7 @@ CONSTRUCT {
         ns8:idShort "OrderDate" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.PurchaserOrderNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/OrderData.PurchaserOrderNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4574,7 +4573,7 @@ CONSTRUCT {
         ns8:idShort "PurchaserOrderNumber" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/OrderData.TypeOfInspectionDocument> a ns1:Property ;
+        <https://example.org/submodel-elements/OrderData.TypeOfInspectionDocument> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4612,7 +4611,7 @@ CONSTRUCT {
         ns8:idShort "TypeOfInspectionDocument" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4640,22 +4639,22 @@ CONSTRUCT {
                 ns5:text "Produktdaten" ;
                 ns1:index 0 ] ;
         ns8:idShort "ProductData" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ActualMass>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.AdditionalProductRequirements>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.BatchNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.Drawing__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ManufacturerProductNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialAdditionalInformation>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialShortName>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.NumberOfPieces>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ProductDescription>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.PurchaserArticleNumber>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.TheoreticalMass> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.ActualMass>,
+                <https://example.org/submodel-elements/ProductData.AdditionalProductRequirements>,
+                <https://example.org/submodel-elements/ProductData.BatchNumber>,
+                <https://example.org/submodel-elements/ProductData.Drawing__00__>,
+                <https://example.org/submodel-elements/ProductData.ManufacturerProductNumber>,
+                <https://example.org/submodel-elements/ProductData.MaterialAdditionalInformation>,
+                <https://example.org/submodel-elements/ProductData.MaterialNumber>,
+                <https://example.org/submodel-elements/ProductData.MaterialShortName>,
+                <https://example.org/submodel-elements/ProductData.NumberOfPieces>,
+                <https://example.org/submodel-elements/ProductData.ProductDescription>,
+                <https://example.org/submodel-elements/ProductData.PurchaserArticleNumber>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification>,
+                <https://example.org/submodel-elements/ProductData.TheoreticalMass> ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ActualMass> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.ActualMass> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4686,7 +4685,7 @@ CONSTRUCT {
         ns8:idShort "ActualMass" ;
         ns1:index 10 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.AdditionalProductRequirements> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/ProductData.AdditionalProductRequirements> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4716,7 +4715,7 @@ CONSTRUCT {
         ns8:idShort "AdditionalProductRequirements" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.BatchNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.BatchNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4747,7 +4746,7 @@ CONSTRUCT {
         ns8:idShort "BatchNumber" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.Drawing__00__> a ns1:Blob ;
+        <https://example.org/submodel-elements/ProductData.Drawing__00__> a ns1:Blob ;
         ns22:contentType "application/pdf" ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
@@ -4778,7 +4777,7 @@ CONSTRUCT {
         ns8:idShort "Drawing__00__" ;
         ns1:index 12 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ManufacturerProductNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.ManufacturerProductNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4809,7 +4808,7 @@ CONSTRUCT {
         ns8:idShort "ManufacturerProductNumber" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialAdditionalInformation> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/ProductData.MaterialAdditionalInformation> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4839,7 +4838,7 @@ CONSTRUCT {
         ns8:idShort "MaterialAdditionalInformation" ;
         ns1:index 7 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.MaterialNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4870,7 +4869,7 @@ CONSTRUCT {
         ns8:idShort "MaterialNumber" ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.MaterialShortName> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.MaterialShortName> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4901,7 +4900,7 @@ CONSTRUCT {
         ns8:idShort "MaterialShortName" ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.NumberOfPieces> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.NumberOfPieces> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4932,7 +4931,7 @@ CONSTRUCT {
         ns8:idShort "NumberOfPieces" ;
         ns1:index 8 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.ProductDescription> a ns1:MultiLanguageProperty ;
+        <https://example.org/submodel-elements/ProductData.ProductDescription> a ns1:MultiLanguageProperty ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4962,7 +4961,7 @@ CONSTRUCT {
         ns8:idShort "ProductDescription" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.PurchaserArticleNumber> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.PurchaserArticleNumber> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -4993,7 +4992,7 @@ CONSTRUCT {
         ns8:idShort "PurchaserArticleNumber" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5021,16 +5020,16 @@ CONSTRUCT {
                 ns5:text "Specification of semi-finished Product" ;
                 ns1:index 1 ] ;
         ns8:idShort "SemiFinishedProductSpecification" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube> ;
         ns1:index 11 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5070,12 +5069,12 @@ CONSTRUCT {
                 ns5:text "Hexagonal Bar" ;
                 ns1:index 1 ] ;
         ns8:idShort "HexagonalBar" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.WidthAcrossFlats> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.WidthAcrossFlats> ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5106,7 +5105,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5137,7 +5136,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.WidthAcrossFlats> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.HexagonalBar.WidthAcrossFlats> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5168,7 +5167,7 @@ CONSTRUCT {
         ns8:idShort "WidthAcrossFlats" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5208,14 +5207,14 @@ CONSTRUCT {
                 ns5:text "Profil" ;
                 ns1:index 0 ] ;
         ns8:idShort "Profile" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Height>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.ProfileSpecification>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Width> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Height>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.ProfileSpecification>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Width> ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Height> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Height> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5246,7 +5245,7 @@ CONSTRUCT {
         ns8:idShort "Height" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5277,7 +5276,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.ProfileSpecification> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.ProfileSpecification> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5308,7 +5307,7 @@ CONSTRUCT {
         ns8:idShort "ProfileSpecification" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5339,7 +5338,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Width> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Profile.Width> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5370,7 +5369,7 @@ CONSTRUCT {
         ns8:idShort "Width" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5410,13 +5409,13 @@ CONSTRUCT {
                 ns5:text "Rechteckstab" ;
                 ns1:index 0 ] ;
         ns8:idShort "RectangularBar" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Height>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Width> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Height>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Width> ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Height> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Height> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5447,7 +5446,7 @@ CONSTRUCT {
         ns8:idShort "Height" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5478,7 +5477,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5509,7 +5508,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Width> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularBar.Width> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5540,7 +5539,7 @@ CONSTRUCT {
         ns8:idShort "Width" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5580,14 +5579,14 @@ CONSTRUCT {
                 ns5:text "Rectangular Tube" ;
                 ns1:index 1 ] ;
         ns8:idShort "RectangularTube" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Height>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.WallThickness>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Width> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Height>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.WallThickness>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Width> ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Height> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Height> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5618,7 +5617,7 @@ CONSTRUCT {
         ns8:idShort "Height" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5649,7 +5648,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5680,7 +5679,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.WallThickness> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.WallThickness> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5711,7 +5710,7 @@ CONSTRUCT {
         ns8:idShort "WallThickness" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Width> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RectangularTube.Width> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5742,7 +5741,7 @@ CONSTRUCT {
         ns8:idShort "Width" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5782,12 +5781,12 @@ CONSTRUCT {
                 ns5:text "Round Bar" ;
                 ns1:index 1 ] ;
         ns8:idShort "RoundBar" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.OuterDiameter>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.StandardReference> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.OuterDiameter>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.StandardReference> ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5818,7 +5817,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.OuterDiameter> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.OuterDiameter> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5849,7 +5848,7 @@ CONSTRUCT {
         ns8:idShort "OuterDiameter" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.RoundBar.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5880,7 +5879,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5920,13 +5919,13 @@ CONSTRUCT {
                 ns5:text "Metallblech" ;
                 ns1:index 0 ] ;
         ns8:idShort "SheetMetal" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Thickness>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Width> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Thickness>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Width> ;
         ns1:index 5 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5957,7 +5956,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -5988,7 +5987,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Thickness> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Thickness> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6019,7 +6018,7 @@ CONSTRUCT {
         ns8:idShort "Thickness" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Width> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.SheetMetal.Width> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6050,7 +6049,7 @@ CONSTRUCT {
         ns8:idShort "Width" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6090,13 +6089,13 @@ CONSTRUCT {
                 ns5:text "Tube" ;
                 ns1:index 1 ] ;
         ns8:idShort "Tube" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.Length>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.OuterDiameter>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.StandardReference>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.WallThickness> ;
+        ns15:value <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.Length>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.OuterDiameter>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.StandardReference>,
+                <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.WallThickness> ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.Length> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.Length> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6127,7 +6126,7 @@ CONSTRUCT {
         ns8:idShort "Length" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.OuterDiameter> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.OuterDiameter> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6158,7 +6157,7 @@ CONSTRUCT {
         ns8:idShort "OuterDiameter" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.StandardReference> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.StandardReference> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6189,7 +6188,7 @@ CONSTRUCT {
         ns8:idShort "StandardReference" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.WallThickness> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.SemiFinishedProductSpecification.Tube.WallThickness> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6220,7 +6219,7 @@ CONSTRUCT {
         ns8:idShort "WallThickness" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData.TheoreticalMass> a ns1:Property ;
+        <https://example.org/submodel-elements/ProductData.TheoreticalMass> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6251,7 +6250,7 @@ CONSTRUCT {
         ns8:idShort "TheoreticalMass" ;
         ns1:index 9 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/Validation> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6279,13 +6278,13 @@ CONSTRUCT {
                 ns5:text "Bestätigung" ;
                 ns1:index 0 ] ;
         ns8:idShort "Validation" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.DateOfIssue>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.OriginatorOfDocument>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.StatementOfCompliance> ;
+        ns15:value <https://example.org/submodel-elements/Validation.CEMarking>,
+                <https://example.org/submodel-elements/Validation.DateOfIssue>,
+                <https://example.org/submodel-elements/Validation.OriginatorOfDocument>,
+                <https://example.org/submodel-elements/Validation.StatementOfCompliance> ;
         ns1:index 6 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking> a ns1:SubmodelElementCollection ;
+        <https://example.org/submodel-elements/Validation.CEMarking> a ns1:SubmodelElementCollection ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6317,14 +6316,14 @@ CONSTRUCT {
                 ns5:text "CE-Zeichen" ;
                 ns1:index 0 ] ;
         ns8:idShort "CEMarking" ;
-        ns15:value <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.DesignationOfCertificateOrApproval>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.IssueDate>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingAdditionalText__00__>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingFile>,
-                <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingName> ;
+        ns15:value <https://example.org/submodel-elements/Validation.CEMarking.DesignationOfCertificateOrApproval>,
+                <https://example.org/submodel-elements/Validation.CEMarking.IssueDate>,
+                <https://example.org/submodel-elements/Validation.CEMarking.MarkingAdditionalText__00__>,
+                <https://example.org/submodel-elements/Validation.CEMarking.MarkingFile>,
+                <https://example.org/submodel-elements/Validation.CEMarking.MarkingName> ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.DesignationOfCertificateOrApproval> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.CEMarking.DesignationOfCertificateOrApproval> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6351,7 +6350,7 @@ CONSTRUCT {
         ns8:idShort "DesignationOfCertificateOrApproval" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.IssueDate> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.CEMarking.IssueDate> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6378,7 +6377,7 @@ CONSTRUCT {
         ns8:idShort "IssueDate" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingAdditionalText__00__> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.CEMarking.MarkingAdditionalText__00__> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6405,7 +6404,7 @@ CONSTRUCT {
         ns8:idShort "MarkingAdditionalText__00__" ;
         ns1:index 4 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingFile> a ns1:File ;
+        <https://example.org/submodel-elements/Validation.CEMarking.MarkingFile> a ns1:File ;
         ns21:contentType "image/png" ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
@@ -6428,7 +6427,7 @@ CONSTRUCT {
         ns8:idShort "MarkingFile" ;
         ns1:index 3 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.CEMarking.MarkingName> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.CEMarking.MarkingName> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6462,7 +6461,7 @@ CONSTRUCT {
         ns8:idShort "MarkingName" ;
         ns1:index 0 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.DateOfIssue> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.DateOfIssue> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6493,7 +6492,7 @@ CONSTRUCT {
         ns8:idShort "DateOfIssue" ;
         ns1:index 1 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.OriginatorOfDocument> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.OriginatorOfDocument> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6524,7 +6523,7 @@ CONSTRUCT {
         ns8:idShort "OriginatorOfDocument" ;
         ns1:index 2 .
 
-        <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation.StatementOfCompliance> a ns1:Property ;
+        <https://example.org/submodel-elements/Validation.StatementOfCompliance> a ns1:Property ;
         ns3:semanticId [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/GlobalReference> ;
@@ -6557,12 +6556,9 @@ CONSTRUCT {
 
 }
 WHERE {
-  ?dataset a dcat:Dataset .
-  BIND(STR(?dataset) AS ?datasetStr)
-  BIND(REPLACE(?datasetStr, "/dataset", "") AS ?model_str)
-  BIND(IRI(?model_str) AS ?model_iri)
 
-  fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
+
+  ?tensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
     qudt:value ?tensileStrengthValueFloat .
 
   BIND(STR(?tensileStrengthValueFloat) AS ?tensileStrengthValueStr)

@@ -12,20 +12,20 @@ from py_aas_rdf.models.concept_description import ConceptDescription
 from py_aas_rdf.models.asset_administraion_shell import AssetAdministrationShell
 
 AAS = Namespace("https://admin-shell.io/aas/3/0/")
+unique_id = "https://materials-data.space/uid123"
+placeholder = "https://example.org"
+aas_json_schema = "https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json"
 
-
-cwd = os.path.dirname(__file__)
 
 # set paths for input data
+cwd = os.path.dirname(__file__)
 mapping_path = os.path.join(cwd, "input","mapping2.sparql")
 graph_path = os.path.join(cwd, "input", "test.ttl") 
 output_path = os.path.join(cwd, "output", "output2.json")
 
-aas_json_schema = "https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json"
-
-
+# open mapping
 with open(mapping_path, "r", encoding="utf-8") as file:
-    query = file.read()
+    query = file.read().replace(placeholder, unique_id)
 
 store = Store()
 store.load(path=graph_path, format=RdfFormat.TURTLE)
