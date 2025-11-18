@@ -68,7 +68,7 @@ output = {
 }
 
 # validate the output against the json schema of aas
-# validate(output, requests.get(aas_json_schema).json())
+validate(output, requests.get(aas_json_schema).json())
 
 # write output files
 with open(output_path, "w", encoding="utf-8") as file:
