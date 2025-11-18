@@ -1,15 +1,12 @@
 """ RDF-Knowledge Graph to AAS Demo"""
-import rdflib
 import json
-from pyld import jsonld
 from jsonschema import validate
 import os
 import requests
-import re
 
-import os
 from rdflib import Graph, RDF, Namespace
-import json
+from pyoxigraph import Store, RdfFormat
+
 from py_aas_rdf.models.submodel import Submodel
 from py_aas_rdf.models.concept_description import ConceptDescription
 from py_aas_rdf.models.asset_administraion_shell import AssetAdministrationShell
@@ -26,33 +23,34 @@ output_path = os.path.join(cwd, "output", "output2.json")
 
 aas_json_schema = "https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json"
 
-g = rdflib.Graph()
-g.parse(graph_path)
+
 with open(mapping_path, "r", encoding="utf-8") as file:
     query = file.read()
-result = g.query(query)
+
+store = Store()
+store.load(path=graph_path, format=RdfFormat.TURTLE)
+result = store.query(query)
 
 
-g = Graph().parse(data=result, format='turtle')
+g = Graph().parse(data=result.serialize(format=RdfFormat.TURTLE), format="turtle")
 submodels_subjects = [subject for subject in g.subjects(predicate=RDF.type, object=AAS["Submodel"])]
 assetadministrationshell_subjects = [subject for subject in g.subjects(predicate=RDF.type, object=AAS["AssetAdministrationShell"])]
 conceptdescription_subjects = [subject for subject in g.subjects(predicate=RDF.type, object=AAS["ConceptDescription"])]
 
 output = {
     "assetAdministrationShells": [ 
-        AssetAdministrationShell.from_rdf(g, subject).model_dump(exclude_none=True)
+        AssetAdministrationShell.from_rdf(g, subject).model_dump(exclude_none=True, mode="json")
         for subject in assetadministrationshell_subjects 
     ],
     "submodels": [
-        Submodel.from_rdf(g, subject).model_dump(exclude_none=True)
+        Submodel.from_rdf(g, subject).model_dump(exclude_none=True, mode="json")
         for subject in submodels_subjects
     ],
     "conceptDescriptions": [
-        ConceptDescription.from_rdf(g, subject).model_dump(exclude_none=True)
+        ConceptDescription.from_rdf(g, subject).model_dump(exclude_none=True, mode="json")
         for subject in conceptdescription_subjects
     ]
 }
-
 
 # validate the output against the json schema of aas
 validate(output, requests.get(aas_json_schema).json())

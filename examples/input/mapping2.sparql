@@ -1,8 +1,7 @@
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX fileid: <https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380/>
-PREFIX ns1: <prov:>
-PREFIX qudt: <http://qudt.org/schema/qudt/>
+prefix dcat: <http://www.w3.org/ns/dcat#>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix fileid: <https://orchester.materials-data.space/5fe17e9f-1f09-48ba-bbf5-7c27f2bdc380/>
+prefix qudt: <http://qudt.org/schema/qudt/>
 prefix ns1: <https://admin-shell.io/aas/3/0/>
 prefix ns10: <https://admin-shell.io/aas/3/0/Identifiable/>
 prefix ns11: <https://admin-shell.io/aas/3/0/Qualifier/>
@@ -26,7 +25,6 @@ prefix ns7: <https://admin-shell.io/aas/3/0/EmbeddedDataSpecification/>
 prefix ns8: <https://admin-shell.io/aas/3/0/Referable/>
 prefix ns9: <https://admin-shell.io/aas/3/0/HasDataSpecification/>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-
 
 CONSTRUCT {
 
@@ -2232,7 +2230,7 @@ CONSTRUCT {
         ns8:idShort "YieldOrProofStrengthMean" .
 
         <https://materials-data.space/ids/aas/2333_6052_8052_0194> a ns1:AssetAdministrationShell ;
-        ns19:assetInformation <https%253A%252F%252Fmaterials-data.space%252Fids%252Fasset%252F3533_6052_8052_4641> ;
+        ns19:assetInformation <https://materials-data.space/ids/asset/3533_6052_8052_4641> ;
         ns19:submodels [ a ns1:Reference ;
                 ns4:keys [ a ns1:Key ;
                         ns6:type <https://admin-shell.io/aas/3/0/KeyTypes/Submodel> ;
@@ -2276,7 +2274,7 @@ CONSTRUCT {
                 <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/ProductData>,
                 <https://materials-data.space/ids/sm/7343_6052_8052_9441/submodel-elements/Validation> .
 
-        <https%253A%252F%252Fmaterials-data.space%252Fids%252Fasset%252F3533_6052_8052_4641> a ns1:AssetInformation ;
+        <https://materials-data.space/ids/asset/3533_6052_8052_4641> a ns1:AssetInformation ;
         ns17:assetKind <https://admin-shell.io/aas/3/0/AssetKind/Instance> ;
         ns17:assetType "Type" ;
         ns17:defaultThumbnail [ a ns1:Resource ;
@@ -4293,7 +4291,7 @@ CONSTRUCT {
                         ns1:index 0 ] ;
                 ns4:type <https://admin-shell.io/aas/3/0/ReferenceTypes/ExternalReference> ] ;
         ns12:valueType <https://admin-shell.io/aas/3/0/DataTypeDefXsd/Float> ;
-        ns12:value ?tensileStrengthValue ;
+        ns12:value ?tensileStrengthValueStr ;
         ns14:qualifiers [ a ns1:Qualifier ;
                 ns3:semanticId [ a ns1:Reference ;
                         ns4:keys [ a ns1:Key ;
@@ -6565,5 +6563,8 @@ WHERE {
   BIND(IRI(?model_str) AS ?model_iri)
 
   fileid:TensileStrength a <https://w3id.org/steel/ProcessOntology/TensileStrength> ;
-    qudt:value ?tensileStrengthValue .
+    qudt:value ?tensileStrengthValueFloat .
+
+  BIND(STR(?tensileStrengthValueFloat) AS ?tensileStrengthValueStr)
+
 }
