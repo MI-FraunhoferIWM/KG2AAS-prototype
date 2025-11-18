@@ -1,15 +1,18 @@
-import os
-from rdflib import Graph, RDF, Namespace
 import json
-from py_aas_rdf.models.submodel import Submodel
+import os
+
+from py_aas_rdf.models.asset_administraion_shell import \
+    AssetAdministrationShell
 from py_aas_rdf.models.concept_description import ConceptDescription
-from py_aas_rdf.models.asset_administraion_shell import AssetAdministrationShell
+from py_aas_rdf.models.submodel import Submodel
+from rdflib import RDF, Graph, Namespace
+
 AAS = Namespace("https://admin-shell.io/aas/3/0/")
 
 cwd = os.path.dirname(__file__)
 
 input_file = os.path.join(cwd, "aas", "model2.ttl")
-json_file = os.path.join(cwd,"aas", "model.json")
+json_file = os.path.join(cwd, "aas", "model.json")
 
 with open(json_file, "r") as file:
     json_object = json.loads(file.read())
@@ -28,4 +31,3 @@ for descr in json_object["conceptDescriptions"]:
 
 with open(input_file, "w") as file:
     file.write(g.serialize())
-

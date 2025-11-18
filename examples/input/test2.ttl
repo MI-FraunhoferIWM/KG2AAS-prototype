@@ -1,0 +1,115 @@
+@prefix ns1: <http://qudt.org/schema/qudt/> .
+@prefix ns2: <http://purl.obolibrary.org/obo/> .
+@prefix ns3: <https://w3id.org/steel/ProcessOntology/> .
+@prefix ns4: <https://w3id.org/pmd/mapro/> .
+@prefix ns5: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix ns6: <https://w3id.org/pmd/co/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pmdx.materials-data.space/knowledge/chemical-composition-test/chemical-composition-test-saa105> a <https://w3id.org/pmd/mapro#/ChemicalCompositionTest> ;
+    rdfs:label "Chemical composition test SA/A105"^^xsd:string ;
+    ns2:RO_0002233 <https://pmdx.materials-data.space/knowledge/specimen/specimen-1-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-2-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-3-saa105-alloy> ;
+    ns2:RO_0002234 <https://pmdx.materials-data.space/knowledge/chemical-composition-specification/saa105chemicalcomposition> ;
+    ns3:hasOperator_Object <https://pmdx.materials-data.space/knowledge/expert/alicia-brown> ;
+    ns3:hasStandard <https://pmdx.materials-data.space/knowledge/document/iso-6306-chemical-analysis-of-steel> .
+
+<https://pmdx.materials-data.space/knowledge/mechanical-test/mechanical-properties-saa105> a ns4:MechanicalTest ;
+    rdfs:label "Mechanical properties SA/A105"^^xsd:string ;
+    ns2:RO_0002233 <https://pmdx.materials-data.space/knowledge/specimen/specimen-1-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-2-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-3-saa105-alloy> ;
+    ns6:PMD_0020005 <https://pmdx.materials-data.space/knowledge/hardness-test/hardness-test-saa105>,
+        <https://pmdx.materials-data.space/knowledge/tensile-test/tensile-test-saa105> .
+
+<https://pmdx.materials-data.space/knowledge/sample-preparation/sample-preparation-saa105> a <https://w3id.org/emmo/domain/characterisation-methodology/chameo#SamplePreparation> ;
+    rdfs:label "Sample preparation SA/A105"^^xsd:string ;
+    ns2:RO_0002233 <https://pmdx.materials-data.space/knowledge/product-data/metal-sheet-saa105> ;
+    ns2:RO_0002234 <https://pmdx.materials-data.space/knowledge/specimen/specimen-1-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-2-saa105-alloy>,
+        <https://pmdx.materials-data.space/knowledge/specimen/specimen-3-saa105-alloy> .
+
+<https://pmdx.materials-data.space/knowledge/chemical-composition-specification/CHEBI_27573_saa105chemicalcomposition> a ns2:CHEBI_27573 ;
+    ns1:hasUnit "http://qudt.org/vocab/unit/PERCENT"^^xsd:anyURI ;
+    ns1:value "0.2"^^xsd:float .
+
+<https://pmdx.materials-data.space/knowledge/chemical-composition-specification/CHEBI_27594_saa105chemicalcomposition> a ns2:CHEBI_27594 ;
+    ns1:hasUnit "http://qudt.org/vocab/unit/PERCENT"^^xsd:anyURI ;
+    ns1:value "0.19"^^xsd:float .
+
+<https://pmdx.materials-data.space/knowledge/chemical-composition-specification/saa105chemicalcomposition> a ns6:PMD_0020004 ;
+    rdfs:label "SA_A105_chemical_composition"^^xsd:string ;
+    ns2:OBI_0001938 <https://pmdx.materials-data.space/knowledge/chemical-composition-specification/CHEBI_27573_saa105chemicalcomposition>,
+        <https://pmdx.materials-data.space/knowledge/chemical-composition-specification/CHEBI_27594_saa105chemicalcomposition> .
+
+<https://pmdx.materials-data.space/knowledge/document/iso-6306-chemical-analysis-of-steel> a ns6:Document ;
+    rdfs:label "ISO 6306 Chemical analysis of steel"^^xsd:string ;
+    ns5:dateOfPublication "2020"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/document/iso-6506-metallic-materials-brinell-hard> a ns6:Document ;
+    rdfs:label "ISO 6506 Metallic materials - Brinell hardness test"^^xsd:string ;
+    ns5:dateOfPublication "2014"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/document/iso-6892-1-metallic-materials-tensile-te> a ns6:Document ;
+    rdfs:label "ISO 6892-1 Metallic materials - Tensile testing"^^xsd:string ;
+    ns5:dateOfPublication "2019"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/expert/alex-ross> a ns5:Person ;
+    rdfs:label "Alex Ross"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/expert/alicia-brown> a ns5:Person ;
+    rdfs:label "Alicia Brown"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/expert/john-doe> a ns5:Person ;
+    rdfs:label "John Doe"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/hardness-test/PMD_0000537_hardness-test-saa105> a ns6:PMD_0000537 ;
+    ns1:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    ns1:value "152-154"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/hardness-test/hardness-test-saa105> a ns6:PMD_0000776 ;
+    rdfs:label "Hardness test SA/A105"^^xsd:string ;
+    ns2:OBI_0001938 <https://pmdx.materials-data.space/knowledge/hardness-test/PMD_0000537_hardness-test-saa105> ;
+    ns2:RO_0002233 <https://pmdx.materials-data.space/knowledge/specimen/specimen-2-saa105-alloy> ;
+    prov:wasAssociatedWith <https://pmdx.materials-data.space/knowledge/laboratory/testing-lab> ;
+    ns3:hasOperator_Object <https://pmdx.materials-data.space/knowledge/expert/alex-ross> ;
+    ns3:hasStandard <https://pmdx.materials-data.space/knowledge/document/iso-6506-metallic-materials-brinell-hard> .
+
+<https://pmdx.materials-data.space/knowledge/product-data/metal-sheet-saa105> a ns4:ProductData ;
+    rdfs:label "Metal sheet SA/A105"^^xsd:string ;
+    prov:wasAssociatedWith <https://pmdx.materials-data.space/knowledge/organization/stahl-holding-saar> ;
+    ns4:HasManufacturerProductNumber "54321"^^xsd:string ;
+    ns4:HasProductDescription "ASTM A105/A 105Mt 2011a; NACE MR01"^^xsd:string ;
+    ns4:HasPurchaseArticleNumber "ANSI/AMSE B16.5"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/tensile-test/TTO_0000009_tensile-test-saa105> a <https://w3id.org/pmd/tto/TTO_0000009> ;
+    ns1:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    ns1:value 357 .
+
+<https://pmdx.materials-data.space/knowledge/tensile-test/TTO_0000053_tensile-test-saa105> a <https://w3id.org/pmd/tto/TTO_0000053> ;
+    ns1:hasUnit "http://qudt.org/vocab/unit/MegaPA"^^xsd:anyURI ;
+    ns1:value 527 .
+
+<https://pmdx.materials-data.space/knowledge/tensile-test/tensile-test-saa105> a ns6:PMD_0000974 ;
+    rdfs:label "Tensile test SA/A105"^^xsd:string ;
+    ns2:OBI_0001938 <https://pmdx.materials-data.space/knowledge/tensile-test/TTO_0000009_tensile-test-saa105>,
+        <https://pmdx.materials-data.space/knowledge/tensile-test/TTO_0000053_tensile-test-saa105> ;
+    ns2:RO_0002233 <https://pmdx.materials-data.space/knowledge/specimen/specimen-1-saa105-alloy> ;
+    prov:wasAssociatedWith <https://pmdx.materials-data.space/knowledge/laboratory/testing-lab> ;
+    ns3:hasOperator_Object <https://pmdx.materials-data.space/knowledge/expert/john-doe> ;
+    ns3:hasStandard <https://pmdx.materials-data.space/knowledge/document/iso-6892-1-metallic-materials-tensile-te> .
+
+<https://pmdx.materials-data.space/knowledge/laboratory/testing-lab> a <https://w3id.org/emmo/domain/characterisation-methodology/chameo#Laboratory> ;
+    rdfs:label "Testing lab"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/specimen/specimen-3-saa105-alloy> a ns2:BFO_0000030 ;
+    rdfs:label "Specimen 3: SA/A105 alloy"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/specimen/specimen-1-saa105-alloy> a ns2:BFO_0000030 ;
+    rdfs:label "Specimen 1: SA/A105 alloy"^^xsd:string .
+
+<https://pmdx.materials-data.space/knowledge/specimen/specimen-2-saa105-alloy> a ns2:BFO_0000030 ;
+    rdfs:label "Specimen 2: SA/A105 alloy"^^xsd:string .

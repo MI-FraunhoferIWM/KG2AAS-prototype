@@ -1,31 +1,27 @@
-""" RDF-Knowledge Graph to AAS Demo"""
-import rdflib
+"""RDF-Knowledge Graph to AAS Demo"""
+
 import json
-from pyld import jsonld
-from jsonschema import validate
 import os
-import requests
 import re
+
+import rdflib
+import requests
+from jsonschema import validate
+from pyld import jsonld
 
 cwd = os.path.dirname(__file__)
 
 # set paths for input data
-mapping_path = os.path.join(cwd, "input","mapping.sparql")
+mapping_path = os.path.join(cwd, "input", "mapping.sparql")
 frame_path = os.path.join(cwd, "input", "frame_slim.json")
-graph_path = os.path.join(cwd, "input", "test.ttl") 
-output_path = os.path.join(cwd,"output", "output.json")
-output_ld_path = os.path.join(cwd,"output", "output-jsonld.json")
+graph_path = os.path.join(cwd, "input", "test.ttl")
+output_path = os.path.join(cwd, "output", "output.json")
+output_ld_path = os.path.join(cwd, "output", "output-jsonld.json")
 
 # set parameters
 patterns = [
-    {
-        "regex": r'"aas:[^/"]+/([^/"]+)"',
-        "replacement": r'"\1"'
-    },
-    {
-        "regex": r'"aas:([^/"]+)"',
-        "replacement": r'"\1"'
-    }
+    {"regex": r'"aas:[^/"]+/([^/"]+)"', "replacement": r'"\1"'},
+    {"regex": r'"aas:([^/"]+)"', "replacement": r'"\1"'},
 ]
 target_type = "Submodel"
 aas_json_schema = "https://raw.githubusercontent.com/admin-shell-io/aas-specs/refs/heads/master/schemas/json/aas.json"
@@ -45,7 +41,7 @@ json_ld = jsonld.frame(json_ld, frame)
 output = jsonld.compact(json_ld, frame["@context"])
 
 # replace ids
-result = json.dumps(output,indent=2)
+result = json.dumps(output, indent=2)
 for pattern in patterns:
     result = re.sub(pattern["regex"], pattern["replacement"], result)
 output = json.loads(result)
