@@ -80,7 +80,7 @@
 
 <https://pmdx.materials-data.space/knowledge/product-data/metal-sheet-saa105> a ns4:ProductData ;
     rdfs:label "Metal sheet SA/A105"^^xsd:string ;
-    prov:wasAssociatedWith <https://pmdx.materials-data.space/knowledge/organization/stahl-holding-saar> ;
+    prov:wasAssociatedWith <https://pmdx.materials-data.space/knowledge/organization/steel-suppliers-inc> ;
     ns4:HasManufacturerProductNumber "54321"^^xsd:string ;
     ns4:HasProductDescription "ASTM A105/A 105Mt 2011a; NACE MR01"^^xsd:string ;
     ns4:HasPurchaseArticleNumber "ANSI/AMSE B16.5"^^xsd:string .
