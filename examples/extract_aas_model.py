@@ -1,9 +1,11 @@
 """Demo how to write an AAS to RDF"""
+
 import os
+
 from basyx.aas import model
 from basyx.aas.adapter.aasx import AASXReader, DictSupplementaryFileContainer
-from basyx.aas.adapter.rdf import write_aas_rdf_file
 from basyx.aas.adapter.json import write_aas_json_file
+from basyx.aas.adapter.rdf import write_aas_rdf_file
 
 cwd = os.path.dirname(__file__)
 
